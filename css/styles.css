@@ -357,3 +357,65 @@ select:disabled { opacity: 0.4; }
 .lo-fs span { color: var(--text); font-weight: 700; }
 @media (max-width: 640px) { .lo-part { flex-basis: 64px; font-size: 10px; } }
 @media (max-width: 640px) { .header-nav { display: none; } .header-inner { justify-content: space-between; } }
+
+/* ---------- gogma planner ---------- */
+.gogma-section { padding: 40px 0 6px; }
+.gogma-card { margin-top: 20px; }
+.gogma-hint-top { margin-top: 0; margin-bottom: 16px; }
+.gogma-grid3 { display: grid; gap: 12px; }
+.gogma-grid2 { display: grid; gap: 12px; }
+@media (min-width: 720px) {
+  .gogma-grid3 { grid-template-columns: 1fr 1fr 1fr; }
+  .gogma-grid2 { grid-template-columns: 1fr 1fr; }
+}
+.gogma-card .field { margin-top: 0; }
+.gogma-obs { margin-top: 16px; }
+.gogma-obs-row .skill-controls { grid-template-columns: 1fr 1fr; }
+@media (max-width: 640px) { .gogma-obs-row .skill-controls { grid-template-columns: 1fr; } }
+.gogma-actions { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
+.btn-gogma-primary {
+  background: linear-gradient(180deg, var(--gold-2), var(--gold)); color: #1a1204;
+  border: 1px solid var(--gold); border-radius: 11px; padding: 12px 22px;
+  font-size: 15px; font-weight: 800; cursor: pointer; min-height: 49px;
+  box-shadow: 0 8px 20px rgba(230, 185, 92, 0.3); transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn-gogma-primary:hover { transform: translateY(-1px); box-shadow: 0 12px 26px rgba(230, 185, 92, 0.4); }
+.btn-gogma-primary:disabled { opacity: 0.55; cursor: wait; transform: none; }
+.gogma-progress { display: flex; align-items: center; gap: 12px; margin-top: 16px; }
+.gogma-progress[hidden] { display: none; }
+.gogma-progress-track { flex: 1; height: 9px; background: #0a0c0f; border-radius: 99px; overflow: hidden; border: 1px solid var(--line-soft); }
+.gogma-progress-fill { height: 100%; width: 0; border-radius: 99px; background: linear-gradient(90deg, var(--gold-deep, #b9822e), var(--gold-2)); transition: width 0.3s ease; }
+.gogma-progress-text { color: var(--muted); font-size: 13.5px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.gogma-found { margin-top: 16px; color: var(--green); font-weight: 650; font-size: 15px; }
+.gogma-warn { margin-top: 16px; color: var(--red); font-size: 14.5px; }
+.gogma-candidates { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+#gogmaDeepRow { margin-top: 14px; }
+#gogmaDeepRow .btn-odds { margin-top: 0; }
+.gogma-div { border-top: 1px dashed var(--line); margin: 26px 0 20px; }
+.gogma-statebar {
+  display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
+  background: linear-gradient(180deg, rgba(255,255,255,0.025), transparent), var(--bg-2);
+  border: 1px solid var(--line-soft); border-radius: 12px; padding: 13px 15px; margin-bottom: 16px;
+}
+.gogma-state-item { display: flex; align-items: baseline; gap: 8px; font-size: 15px; }
+.gogma-state-item .field-label { margin-bottom: 0; }
+.gogma-state-item strong { font-size: 17px; font-variant-numeric: tabular-nums; }
+.gogma-state-btns { display: flex; gap: 8px; flex-wrap: wrap; margin-left: auto; }
+.gogma-col-grid { margin-top: 0; }
+.gogma-callout {
+  margin-top: 18px; border-radius: 14px; padding: 15px 17px; font-size: 15px; font-weight: 650;
+  background: linear-gradient(135deg, rgba(230, 185, 92, 0.16), rgba(230, 185, 92, 0.04) 60%), #12100b;
+  border: 1px solid rgba(230, 185, 92, 0.45);
+}
+.gogma-table-wrap { margin-top: 18px; max-height: 480px; overflow: auto; border: 1px solid var(--line-soft); border-radius: 12px; }
+.gogma-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.gogma-table th {
+  position: sticky; top: 0; text-align: left; padding: 10px 13px;
+  background: var(--panel-hi); color: var(--faint);
+  font-size: 11.5px; text-transform: uppercase; letter-spacing: 1.4px; z-index: 1;
+}
+.gogma-table td { padding: 8px 13px; border-top: 1px solid var(--line-soft); }
+.gogma-table td.step { color: var(--faint); font-variant-numeric: tabular-nums; width: 64px; }
+.gogma-table tr.hit td { background: rgba(230, 185, 92, 0.13); color: var(--gold-2); font-weight: 700; }
+#gogmaMore { margin-top: 14px; width: 100%; }
+.gogma-credit { color: var(--faint); font-size: 12.5px; margin-top: 22px; border-top: 1px solid var(--line-soft); padding-top: 13px; }
