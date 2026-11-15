@@ -24,6 +24,7 @@
     <nav class="header-nav">
       <a href="#calculator" data-i18n="nav_calculator">Calculator</a>
       <a href="#builds" id="navBuilds" hidden data-i18n="nav_builds">Meta Builds</a>
+      <a href="#gogma" data-i18n="nav_gogma">Gogma Planner</a>
       <a href="#how" data-i18n="nav_how">How it works</a>
     </nav>
     <div class="lang-bar" role="group" aria-label="Language">
@@ -80,6 +81,89 @@
     <div class="build-grid" id="buildGrid"></div>
   </section>
 
+  <section id="gogma" class="wrap gogma-section">
+    <h2 class="section-title" data-i18n="gogma_title">Gogma skill planner — see your next rolls</h2>
+    <p class="section-sub" data-i18n="gogma_sub">A Gogma weapon's Set + Group skills aren't random — they follow a fixed sequence generated from your save. Enter a few consecutive reroll results to find your seed, then read every upcoming roll in advance.</p>
+
+    <div class="card gogma-card">
+      <h3 class="card-title" data-i18n="gogma_step1">Step 1 · Find your seed</h3>
+      <p class="field-hint gogma-hint-top" data-i18n="gogma_step1_hint">Take any Gogma weapon to the smithy and use Reset Skills on it repeatedly, entering each result below in order. Every Gogma skill roll shares one sequence — don't create Gogma weapons or reroll other weapons in between, or the results won't be consecutive.</p>
+
+      <div class="gogma-grid3">
+        <div class="field">
+          <span class="field-label" data-i18n="gogma_weapon">Weapon type</span>
+          <select id="gogmaWeapon"></select>
+        </div>
+        <div class="field">
+          <span class="field-label" data-i18n="gogma_attribute">Attribute</span>
+          <select id="gogmaAttr"></select>
+        </div>
+        <div class="field">
+          <span class="field-label" data-i18n="gogma_k_label">Results to enter</span>
+          <select id="gogmaK"></select>
+        </div>
+      </div>
+      <p class="field-hint" data-i18n="gogma_k_hint">More results = fewer false matches. 6 is a good default.</p>
+
+      <div id="gogmaObsRows" class="gogma-obs"></div>
+
+      <div class="gogma-actions">
+        <button id="gogmaFind" class="btn-gogma-primary" data-i18n="gogma_find">Find my seed</button>
+        <button id="gogmaCancel" class="btn-loadout" hidden data-i18n="gogma_cancel">Cancel</button>
+      </div>
+      <div id="gogmaProgress" class="gogma-progress" hidden>
+        <div class="gogma-progress-track"><div class="gogma-progress-fill" id="gogmaProgressFill"></div></div>
+        <span class="gogma-progress-text" id="gogmaProgressText"></span>
+      </div>
+      <div id="gogmaSearchResult" aria-live="polite"></div>
+      <div id="gogmaDeepRow" hidden>
+        <button id="gogmaDeep" class="btn-odds" data-i18n="gogma_deep">Search deeper (positions 100–499)</button>
+      </div>
+
+      <div class="gogma-div"></div>
+
+      <h3 class="card-title" data-i18n="gogma_step2">Step 2 · Future sight</h3>
+      <div id="gogmaStep2">
+        <p id="gogmaNeedSeed" class="field-hint" data-i18n="gogma_need_seed">Find your seed in Step 1 first — future sight unlocks as soon as your position in the sequence is known.</p>
+        <div id="gogmaPlanner" hidden>
+          <div class="gogma-statebar">
+            <span class="gogma-state-item"><span class="field-label" data-i18n="gogma_seed_label">Seed</span><strong id="gogmaSeedVal">—</strong></span>
+            <span class="gogma-state-item"><strong id="gogmaPosVal">—</strong></span>
+            <span class="gogma-state-btns">
+              <button id="gogmaPlusOne" class="btn-loadout" data-i18n="gogma_plus_one">+1 roll — I rolled in game</button>
+              <button id="gogmaUndoSave" class="btn-loadout" hidden>I quit without saving</button>
+              <button id="gogmaReset" class="btn-loadout" data-i18n="gogma_reset">Start over</button>
+            </span>
+          </div>
+
+          <div class="gogma-grid2">
+            <div class="field">
+              <span class="field-label" data-i18n="gogma_target_set">Target Set skill</span>
+              <select id="gogmaTargetSet"></select>
+            </div>
+            <div class="field">
+              <span class="field-label" data-i18n="gogma_target_group">Target Group skill</span>
+              <select id="gogmaTargetGroup"></select>
+            </div>
+          </div>
+          <div class="field">
+            <span class="field-label" data-i18n="gogma_col_label">Show rolls for</span>
+            <div class="gogma-grid2 gogma-col-grid">
+              <select id="gogmaColWeapon"></select>
+              <select id="gogmaColAttr"></select>
+            </div>
+          </div>
+
+          <div id="gogmaCallout" class="gogma-callout" hidden></div>
+          <div id="gogmaTableWrap" class="gogma-table-wrap"></div>
+          <button id="gogmaMore" class="btn-odds" hidden data-i18n="gogma_show_more">Show up to 1,000 rolls</button>
+        </div>
+      </div>
+
+      <p class="gogma-credit" data-i18n="gogma_credit">Skill-roll algorithm reverse-engineered by WiseHorror (GARP). Seed-search approach after GogmaSeedFinder (MIT). A fan-made tool — not affiliated with CAPCOM.</p>
+    </div>
+  </section>
+
   <section id="how" class="wrap how-section">
     <h2 class="section-title" data-i18n="how_title">How the odds are calculated</h2>
     <div class="how-grid">
@@ -109,9 +193,11 @@
 
 <script src="data/data.js"></script>
 <script src="data/builds.js"></script>
+<script src="data/gogma-data.js"></script>
 <script src="js/calc.js"></script>
 <script src="js/share.js"></script>
 <script src="js/i18n.js"></script>
 <script src="js/app.js"></script>
+<script src="js/gogma.js"></script>
 </body>
 </html>
