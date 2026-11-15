@@ -310,7 +310,7 @@
     var finished = 0;
     for (var wi = 0; wi < W; wi++) {
       (function (wi) {
-        var wk = new Worker("js/gogma-worker.js");
+        var wk = new Worker("js/gogma-worker.js?v=3");
         var lastDone = 0;
         wk.onmessage = function (e) {
           var d = e.data;
