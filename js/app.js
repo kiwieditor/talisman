@@ -10,7 +10,8 @@
   var skillByName = {};
   data.skills.forEach(function (s) { skillById[s.id] = s; skillByName[s.name] = s; });
 
-  var SHOP_URL = "https://kiwigg.com/products/monster-hunter-wilds-ps5-save-edit-service-we-edit-your-save";
+  var INVITE_RESULT_URL = "https://discord.gg/hcE7Bngm7J";
+  var INVITE_FOOTER_URL = "https://discord.gg/TUkQygPxEr";
   var SLOT_PATTERNS = [
     { label: "", slots: [] },
     { label: "[1]", slots: [1] },
@@ -254,8 +255,9 @@
         '<span class="verdict illegal">' + t("verdict_illegal") + "</span>" +
         '<div class="illegal-why">' + t("illegal_why") + "<ul>" + why + "</ul></div>" +
         fix +
-        '<div class="share-row"><button class="btn-share" id="btnShare">' + t("share_btn") + "</button></div>";
+        '<div class="share-row"><button class="btn-share" id="btnShare">' + t("share_btn") + '</button><button class="btn-share" id="btnCopyMd">' + t("copy_md_btn") + "</button></div>";
       wireShare(targets, res, null);
+      wireCopyMd(targets, res);
       return;
     }
 
@@ -267,13 +269,16 @@
       return '<div class="rbar"><span class="tag ' + rk.toLowerCase() + '">' + rk + '</span><span class="track"><span class="fill ' + rk.toLowerCase() + '" data-w="' + (v > 0 ? w : 0) + '" style="display:block"></span></span><span class="val">' + (v > 0 ? (v / res.probability * 100).toFixed(1) + "% " + t("of_hits") : "—") + "</span></div>";
     }).join("");
 
-    var brutal = res.oneIn >= 10000;
-    var bridge =
-      '<div class="bridge' + (brutal ? " brutal" : "") + '">' +
-      "<p>" + (brutal ? t("bridge_brutal") : "") + t("bridge_p") + "</p>" +
-      '<p class="bridge-sub">' + t("bridge_sub") + "</p>" +
-      '<a class="cta" href="' + SHOP_URL + '" target="_blank" rel="noopener">' + t("bridge_cta") + "</a>" +
-      "</div>";
+    var labModule = "";
+    if (res.probability < 0.0005) {
+      labModule =
+        '<div class="lab-module">' +
+        '<p class="lab-h">' + t("lab_h", { pct: fmtPct(res.probability) }) + "</p>" +
+        '<p class="lab-p">' + t("lab_p") + "</p>" +
+        '<a class="lab-cta" href="' + INVITE_RESULT_URL + '" target="_blank" rel="noopener" data-goatcounter-click="click-discord-calc-result">' + t("lab_cta") + "</a>" +
+        '<p class="lab-sub">' + t("lab_sub") + "</p>" +
+        "</div>";
+    }
 
     body.innerHTML =
       previewHTML(targets, res) +
@@ -286,13 +291,48 @@
       "</div>" +
       '<div class="rarity-bars"><h4>' + t("where_hit") + "</h4>" + bars + "</div>" +
       '<div class="best-line"><h4>' + t("most_likely") + "</h4><strong>" + res.best.rarity + "</strong> · " + res.best.groups.map(groupShort).join(" + ") + "</div>" +
-      bridge +
-      '<div class="share-row"><button class="btn-share" id="btnShare">' + t("share_btn") + "</button></div>";
+      labModule +
+      '<div class="share-row"><button class="btn-share" id="btnShare">' + t("share_btn") + '</button><button class="btn-share" id="btnCopyMd">' + t("copy_md_btn") + "</button></div>";
 
     countUp($("#oddsNum"), Math.round(res.oneIn));
     countUp($("#apprNum"), grind.appraisals);
     animateBars(body);
     wireShare(targets, res, grind);
+    wireCopyMd(targets, res);
+  }
+
+  /* ---------- copy Reddit markdown ---------- */
+  function slotCode() {
+    if (!state.slots.length) return "Any";
+    return state.slots.map(function (s) { return s === -1 ? "W" : s; }).join("-");
+  }
+  function copyText(text) {
+    function fallback() {
+      var ta = document.createElement("textarea");
+      ta.value = text; ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand("copy"); } catch (e) {}
+      document.body.removeChild(ta);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).catch(fallback);
+    } else {
+      fallback();
+    }
+  }
+  function wireCopyMd(targets, res) {
+    var btn = $("#btnCopyMd");
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+      var names = targets.map(function (tg) { return skillById[tg.skill].name + " Lv" + tg.level; }).join(" / ");
+      var leg = res.legal
+        ? "Legality: ✅ Legal | Exact Odds: 1 in " + fmtInt(Math.round(res.oneIn)) + " (" + fmtPct(res.probability) + ")"
+        : "Legality: ❌ Cannot roll | Exact Odds: 0% (does not exist)";
+      copyText("My Charm Roll: " + names + " [" + slotCode() + "]\n" + leg + "\n(Calculated via talisman.kiwieditor.com)");
+      var old = btn.textContent;
+      btn.textContent = t("copy_md_done");
+      setTimeout(function () { btn.textContent = old; }, 1600);
+    });
   }
 
   function wireShare(targets, res, grind) {
@@ -458,6 +498,8 @@
     });
   });
   document.documentElement.lang = I.lang === "zh" ? "zh-CN" : I.lang === "tw" ? "zh-TW" : I.lang;
+  var footBtn = $("#footInviteBtn");
+  if (footBtn) footBtn.href = INVITE_FOOTER_URL;
   I.applyStatic();
   renderAll();
 })();
