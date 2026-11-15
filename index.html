@@ -22,85 +22,88 @@
       <span class="brand-text">Wilds <em>Talisman Calculator</em></span>
     </a>
     <nav class="header-nav">
-      <a href="#calculator">Calculator</a>
-      <a href="#builds" id="navBuilds" hidden>Meta Builds</a>
-      <a href="#how">How it works</a>
+      <a href="#calculator" data-i18n="nav_calculator">Calculator</a>
+      <a href="#builds" id="navBuilds" hidden data-i18n="nav_builds">Meta Builds</a>
+      <a href="#how" data-i18n="nav_how">How it works</a>
     </nav>
+    <div class="lang-bar" role="group" aria-label="Language">
+      <button class="lang-btn" data-lang="en">EN</button><button class="lang-btn" data-lang="zh">简</button><button class="lang-btn" data-lang="tw">繁</button><button class="lang-btn" data-lang="ja">日</button>
+    </div>
   </div>
 </header>
 
 <main id="top">
   <section class="hero wrap">
-    <div class="kicker">Monster Hunter Wilds · Talisman Lab</div>
-    <h1>Can this talisman <span class="accent">actually roll?</span></h1>
-    <p class="hero-sub">Pick up to three skills and a slot layout. Get a legality verdict and the <strong>exact odds</strong> — no guessing, no “trust me” tables.</p>
+    <div class="kicker" data-i18n="kicker">Monster Hunter Wilds · Talisman Lab</div>
+    <h1><span data-i18n="hero_h1a">Can this talisman </span><span class="accent" data-i18n="hero_h1b">actually roll?</span></h1>
+    <p class="hero-sub" data-i18n="hero_sub">Pick up to three skills and a slot layout. Get a legality verdict and the <strong>exact odds</strong> — no guessing, no “trust me” tables.</p>
     <div class="hero-stats">
-      <div class="hstat"><div class="n">288</div><div class="l">Pool entries</div></div>
-      <div class="hstat"><div class="n">29</div><div class="l">Templates</div></div>
-      <div class="hstat"><div class="n">14</div><div class="l">Meta builds</div></div>
-      <div class="hstat"><div class="n">Exact</div><div class="l">Datamined odds</div></div>
+      <div class="hstat"><div class="n">288</div><div class="l" data-i18n="stat_pool">Pool entries</div></div>
+      <div class="hstat"><div class="n">29</div><div class="l" data-i18n="stat_templates">Templates</div></div>
+      <div class="hstat"><div class="n">14</div><div class="l" data-i18n="stat_builds">Meta builds</div></div>
+      <div class="hstat"><div class="n" data-i18n="stat_exact">Exact</div><div class="l" data-i18n="stat_odds">Datamined odds</div></div>
     </div>
   </section>
 
   <section id="calculator" class="wrap calc-grid">
     <div class="card picker-card">
-      <h2 class="card-title">Your dream talisman</h2>
+      <h2 class="card-title" data-i18n="calc_title">Your dream talisman</h2>
 
       <div id="skillRows"></div>
 
       <div class="field">
-        <span class="field-label" id="slotLabel">Decoration slots</span>
+        <span class="field-label" id="slotLabel" data-i18n="slot_label">Decoration slots</span>
         <div class="slot-chips" id="slotChips" role="group" aria-labelledby="slotLabel"></div>
-        <p class="field-hint">Leave on “Any” if you only care about the skills. <span class="w-chip">W</span> = weapon slot (Rarity 8 only).</p>
+        <p class="field-hint" data-i18n="slot_hint">Leave on “Any” if you only care about the skills. <span class="w-chip">W</span> = weapon slot (Rarity 8 only).</p>
       </div>
 
       <div class="field">
-        <span class="field-label" id="paceLabel">Your grind pace</span>
+        <span class="field-label" id="paceLabel" data-i18n="pace_label">Your grind pace</span>
         <div class="slot-chips" id="paceChips" role="group" aria-labelledby="paceLabel"></div>
-        <p class="field-hint">Talismans appraised per hour of farming — used for the time estimate.</p>
+        <p class="field-hint" data-i18n="pace_hint">Talismans appraised per hour of farming — used for the time estimate.</p>
       </div>
     </div>
 
     <div class="card result-card" id="resultCard" aria-live="polite">
       <div class="result-empty" id="resultEmpty">
         <svg class="empty-gem" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2 L28 12 L16 30 L4 12 Z" fill="none" stroke="#3a4150" stroke-width="2"/></svg>
-        <p>Choose at least one skill to see whether it can roll — and how long the grind really is.</p>
+        <p data-i18n="result_empty">Choose at least one skill to see whether it can roll — and how long the grind really is.</p>
       </div>
       <div id="resultBody" hidden></div>
     </div>
   </section>
 
   <section id="builds" class="wrap builds-section" hidden>
-    <h2 class="section-title">Meta endgame builds — and the talisman each one needs</h2>
-    <p class="section-sub">Researched from current meta sources, one entry per weapon. Tap “Check the odds” and the build’s ideal talisman loads straight into the calculator.</p>
+    <h2 class="section-title" data-i18n="builds_title">Meta endgame builds — full loadouts</h2>
+    <p class="section-sub" data-i18n="builds_sub">Real TU4 builds from Game8's per-weapon pages: weapon, armor, every decoration, and the talisman each build actually equips. Tap “Check the odds” on an appraised charm to load it into the calculator.</p>
     <div class="build-filters" id="buildFilters"></div>
     <div class="build-grid" id="buildGrid"></div>
   </section>
 
   <section id="how" class="wrap how-section">
-    <h2 class="section-title">How the odds are calculated</h2>
+    <h2 class="section-title" data-i18n="how_title">How the odds are calculated</h2>
     <div class="how-grid">
       <div class="how-item">
-        <h3>1 · Rarity roll</h3>
-        <p>Every appraisal first rolls a rarity: R5 at 59%, R6 at 27%, R7 at 11%, R8 at 3%. Most dream talismans can only come from one or two of these.</p>
+        <h3 data-i18n="how1_t">1 · Rarity roll</h3>
+        <p data-i18n="how1_p">Every appraisal first rolls a rarity: R5 at 59%, R6 at 27%, R7 at 11%, R8 at 3%. Most dream talismans can only come from one or two of these.</p>
       </div>
       <div class="how-item">
-        <h3>2 · Template roll</h3>
-        <p>Each rarity has fixed templates (29 in total) that decide which skill pools the talisman draws from — for example, a weapon-skill tier-3 slot plus a 3-slot armor skill. If no template can hold your combination, the talisman <strong>cannot exist</strong>.</p>
+        <h3 data-i18n="how2_t">2 · Template roll</h3>
+        <p data-i18n="how2_p">Each rarity has fixed templates (29 in total) that decide which skill pools the talisman draws from — for example, a weapon-skill tier-3 slot plus a 3-slot armor skill. If no template can hold your combination, the talisman <strong>cannot exist</strong>.</p>
       </div>
       <div class="how-item">
-        <h3>3 · Skill &amp; slot rolls</h3>
-        <p>Each slot then draws one skill uniformly from its pool (9–43 entries depending on the pool), and decoration slots roll one of the template’s patterns. Multiply it all together and you get the exact odds shown above.</p>
+        <h3 data-i18n="how3_t">3 · Skill &amp; slot rolls</h3>
+        <p data-i18n="how3_p">Each slot then draws one skill uniformly from its pool (9–43 entries depending on the pool), and decoration slots roll one of the template’s patterns. Multiply it all together and you get the exact odds shown above.</p>
       </div>
     </div>
-    <p class="method-note">Data: the game’s datamined talisman tables (skill pools, 288 entries; templates, 29 rows), cross-checked against our own save-editing dataset. Templates within a rarity are weighted equally — relative template weights have never been published, and every public calculator makes the same assumption. R8 slot patterns use the datamined 50 / 33 / 17 split.</p>
+    <p class="method-note" data-i18n="method_note">Data: the game’s datamined talisman tables (skill pools, 288 entries; templates, 29 rows), cross-checked against our own save-editing dataset. Templates within a rarity are weighted equally — relative template weights have never been published, and every public calculator makes the same assumption. R8 slot patterns use the datamined 50 / 33 / 17 split.</p>
   </section>
 </main>
 
 <footer class="site-footer">
   <div class="wrap">
     <p class="footer-brand">Wilds Talisman Calculator</p>
-    <p class="footer-note">A fan-made tool. Not affiliated with CAPCOM. Monster Hunter is a registered trademark of CAPCOM CO., LTD. Odds are exact under the model described above; the game’s RNG is, as always, under no obligation to respect them.</p>
+    <p class="footer-note" data-i18n="footer_note">A fan-made tool. Not affiliated with CAPCOM. Monster Hunter is a registered trademark of CAPCOM CO., LTD. Odds are exact under the model described above; the game’s RNG is, as always, under no obligation to respect them.</p>
   </div>
 </footer>
 
@@ -108,6 +111,7 @@
 <script src="data/builds.js"></script>
 <script src="js/calc.js"></script>
 <script src="js/share.js"></script>
+<script src="js/i18n.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>
