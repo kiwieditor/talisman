@@ -7,7 +7,10 @@ window.TALISMAN_DATA = {
    "levels": [
     1,
     2
-   ]
+   ],
+   "nameZh": "适应环境",
+   "nameTw": "適應環境",
+   "nameJa": "環境適応"
   },
   {
    "id": "adrenaline_rush",
@@ -15,7 +18,10 @@ window.TALISMAN_DATA = {
    "kind": "armor",
    "levels": [
     1
-   ]
+   ],
+   "nameZh": "巧击",
+   "nameTw": "巧擊",
+   "nameJa": "巧撃"
   },
   {
    "id": "agitator",
@@ -23,7 +29,10 @@ window.TALISMAN_DATA = {
    "kind": "armor",
    "levels": [
     1
-   ]
+   ],
+   "nameZh": "挑战者",
+   "nameTw": "挑戰者",
+   "nameJa": "挑戦者"
   },
   {
    "id": "airborne",
@@ -31,7 +40,10 @@ window.TALISMAN_DATA = {
    "kind": "weapon",
    "levels": [
     1
-   ]
+   ],
+   "nameZh": "飞燕",
+   "nameTw": "飛燕",
+   "nameJa": "飛燕"
   },
   {
    "id": "ambush",
@@ -40,7 +52,10 @@ window.TALISMAN_DATA = {
    "levels": [
     1,
     2
-   ]
+   ],
+   "nameZh": "急袭",
+   "nameTw": "急襲",
+   "nameJa": "急襲"
   },
   {
    "id": "antivirus",
@@ -50,7 +65,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "无我之境",
+   "nameTw": "無我之境",
+   "nameJa": "無我の境地"
   },
   {
    "id": "aquatic_oilsilt_mobility",
@@ -59,7 +77,10 @@ window.TALISMAN_DATA = {
    "levels": [
     1,
     2
-   ]
+   ],
+   "nameZh": "适应水域·油泥",
+   "nameTw": "適應水域·油泥",
+   "nameJa": "水場・油泥適応"
   },
   {
    "id": "artillery",
@@ -69,7 +90,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "炮术",
+   "nameTw": "炮術",
+   "nameJa": "砲術"
   },
   {
    "id": "attack_boost",
@@ -79,7 +103,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "攻击",
+   "nameTw": "攻擊",
+   "nameJa": "攻撃"
   },
   {
    "id": "ballistics",
@@ -89,7 +116,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "弹道强化",
+   "nameTw": "彈道強化",
+   "nameJa": "弾導強化"
   },
   {
    "id": "bind_resistance",
@@ -99,7 +129,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "束缚耐性",
+   "nameTw": "束縛耐性",
+   "nameJa": "拘束耐性"
   },
   {
    "id": "blast_attack",
@@ -109,7 +142,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "爆破属性强化",
+   "nameTw": "爆破屬性強化",
+   "nameJa": "爆破属性強化"
   },
   {
    "id": "blast_functionality",
@@ -117,7 +153,10 @@ window.TALISMAN_DATA = {
    "kind": "weapon",
    "levels": [
     1
-   ]
+   ],
+   "nameZh": "爆破瓶追加",
+   "nameTw": "爆破瓶追加",
+   "nameJa": "爆破ビン追加"
   },
   {
    "id": "blast_resistance",
@@ -127,7 +166,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "爆破异常耐性",
+   "nameTw": "爆破異常耐性",
+   "nameJa": "爆破やられ耐性"
   },
   {
    "id": "bleeding_resistance",
@@ -137,7 +179,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "裂伤耐性",
+   "nameTw": "裂傷耐性",
+   "nameJa": "裂傷耐性"
   },
   {
    "id": "blight_resistance",
@@ -146,7 +191,10 @@ window.TALISMAN_DATA = {
    "levels": [
     1,
     2
-   ]
+   ],
+   "nameZh": "属性异常耐性",
+   "nameTw": "屬性異常耐性",
+   "nameJa": "属性やられ耐性"
   },
   {
    "id": "bludgeoner",
@@ -156,7 +204,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "钝器能手",
+   "nameTw": "鈍器能手",
+   "nameJa": "鈍器使い"
   },
   {
    "id": "bombardier",
@@ -166,7 +217,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "炸弹客",
+   "nameTw": "炸彈客",
+   "nameJa": "ボマー"
   },
   {
    "id": "botanist",
@@ -176,7 +230,10 @@ window.TALISMAN_DATA = {
     2,
     3,
     4
-   ]
+   ],
+   "nameZh": "植生学",
+   "nameTw": "植生學",
+   "nameJa": "植生学"
   },
   {
    "id": "burst",
@@ -184,7 +241,10 @@ window.TALISMAN_DATA = {
    "kind": "armor",
    "levels": [
     1
-   ]
+   ],
+   "nameZh": "连击",
+   "nameTw": "連擊",
+   "nameJa": "連撃"
   },
   {
    "id": "charge_master",
@@ -194,7 +254,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "蓄力大师",
+   "nameTw": "蓄力大師",
+   "nameJa": "チャージマスター"
   },
   {
    "id": "charge_up",
@@ -202,7 +265,10 @@ window.TALISMAN_DATA = {
    "kind": "weapon",
    "levels": [
     1
-   ]
+   ],
+   "nameZh": "蓄击强化",
+   "nameTw": "蓄擊強化",
+   "nameJa": "溜打強化"
   },
   {
    "id": "coalescence",
@@ -211,7 +277,10 @@ window.TALISMAN_DATA = {
    "levels": [
     1,
     2
-   ]
+   ],
+   "nameZh": "因祸得福",
+   "nameTw": "因禍得福",
+   "nameJa": "災禍転福"
   },
   {
    "id": "constitution",
@@ -221,7 +290,10 @@ window.TALISMAN_DATA = {
     2,
     3,
     4
-   ]
+   ],
+   "nameZh": "体术",
+   "nameTw": "體術",
+   "nameJa": "体術"
   },
   {
    "id": "convert_element",
@@ -229,7 +301,10 @@ window.TALISMAN_DATA = {
    "kind": "armor",
    "levels": [
     1
-   ]
+   ],
+   "nameZh": "属性变换",
+   "nameTw": "屬性變換",
+   "nameJa": "属性変換"
   },
   {
    "id": "counterstrike",
@@ -238,7 +313,10 @@ window.TALISMAN_DATA = {
    "levels": [
     1,
     2
-   ]
+   ],
+   "nameZh": "逆袭",
+   "nameTw": "逆襲",
+   "nameJa": "逆襲"
   },
   {
    "id": "critical_boost",
@@ -246,7 +324,10 @@ window.TALISMAN_DATA = {
    "kind": "weapon",
    "levels": [
     1
-   ]
+   ],
+   "nameZh": "超会心",
+   "nameTw": "超會心",
+   "nameJa": "超会心"
   },
   {
    "id": "critical_draw",
@@ -256,7 +337,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "拔刀术【技】",
+   "nameTw": "拔刀術【技】",
+   "nameJa": "抜刀術"
   },
   {
    "id": "critical_element",
@@ -266,7 +350,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "会心击【属性】",
+   "nameTw": "會心擊【屬性】",
+   "nameJa": "会心撃"
   },
   {
    "id": "critical_eye",
@@ -276,7 +363,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "看破",
+   "nameTw": "看破",
+   "nameJa": "見切り"
   },
   {
    "id": "critical_status",
@@ -286,7 +376,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "会心击【特殊】",
+   "nameTw": "會心擊【特殊】",
+   "nameJa": "会心撃"
   },
   {
    "id": "defense_boost",
@@ -296,7 +389,10 @@ window.TALISMAN_DATA = {
     2,
     3,
     4
-   ]
+   ],
+   "nameZh": "防御",
+   "nameTw": "防禦",
+   "nameJa": "防御"
   },
   {
    "id": "divine_blessing",
@@ -306,7 +402,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "精灵加护",
+   "nameTw": "精靈加護",
+   "nameJa": "精霊の加護"
   },
   {
    "id": "dragon_attack",
@@ -316,7 +415,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "龙属性攻击强化",
+   "nameTw": "龍屬性攻擊強化",
+   "nameJa": "龍属性攻撃強化"
   },
   {
    "id": "dragon_resistance",
@@ -326,7 +428,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "龙耐性",
+   "nameTw": "龍耐性",
+   "nameJa": "龍耐性"
   },
   {
    "id": "earplugs",
@@ -335,7 +440,10 @@ window.TALISMAN_DATA = {
    "levels": [
     1,
     2
-   ]
+   ],
+   "nameZh": "耳塞",
+   "nameTw": "耳塞",
+   "nameJa": "耳栓"
   },
   {
    "id": "elemental_absorption",
@@ -343,7 +451,10 @@ window.TALISMAN_DATA = {
    "kind": "armor",
    "levels": [
     1
-   ]
+   ],
+   "nameZh": "属性吸收",
+   "nameTw": "屬性吸收",
+   "nameJa": "属性吸収"
   },
   {
    "id": "evade_extender",
@@ -352,7 +463,10 @@ window.TALISMAN_DATA = {
    "levels": [
     1,
     2
-   ]
+   ],
+   "nameZh": "回避距离提升",
+   "nameTw": "迴避距離提升",
+   "nameJa": "回避距離UP"
   },
   {
    "id": "evade_window",
@@ -361,7 +475,10 @@ window.TALISMAN_DATA = {
    "levels": [
     2,
     3
-   ]
+   ],
+   "nameZh": "回避性能",
+   "nameTw": "迴避效能",
+   "nameJa": "回避性能"
   },
   {
    "id": "exhaust_functionality",
@@ -369,7 +486,10 @@ window.TALISMAN_DATA = {
    "kind": "weapon",
    "levels": [
     1
-   ]
+   ],
+   "nameZh": "减气瓶追加",
+   "nameTw": "減氣瓶追加",
+   "nameJa": "減気ビン追加"
   },
   {
    "id": "fire_attack",
@@ -379,7 +499,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "火属性攻击强化",
+   "nameTw": "火屬性攻擊強化",
+   "nameJa": "火属性攻撃強化"
   },
   {
    "id": "fire_resistance",
@@ -389,7 +512,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "火耐性",
+   "nameTw": "火耐性",
+   "nameJa": "火耐性"
   },
   {
    "id": "flayer",
@@ -397,7 +523,10 @@ window.TALISMAN_DATA = {
    "kind": "armor",
    "levels": [
     1
-   ]
+   ],
+   "nameZh": "锁刃刺击",
+   "nameTw": "鎖刃刺擊",
+   "nameJa": "鎖刃刺撃"
   },
   {
    "id": "flinch_free",
@@ -407,7 +536,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "减轻胆怯",
+   "nameTw": "減輕膽怯",
+   "nameJa": "ひるみ軽減"
   },
   {
    "id": "focus",
@@ -417,7 +549,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "集中",
+   "nameTw": "集中",
+   "nameJa": "集中"
   },
   {
    "id": "foray",
@@ -425,7 +560,10 @@ window.TALISMAN_DATA = {
    "kind": "armor",
    "levels": [
     1
-   ]
+   ],
+   "nameZh": "攻势",
+   "nameTw": "攻勢",
+   "nameJa": "攻勢"
   },
   {
    "id": "free_meal",
@@ -435,7 +573,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "满足感",
+   "nameTw": "滿足感",
+   "nameJa": "満足感"
   },
   {
    "id": "geologist",
@@ -445,7 +586,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "地质学",
+   "nameTw": "地質學",
+   "nameJa": "地質学"
   },
   {
    "id": "guard",
@@ -455,7 +599,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "格挡性能",
+   "nameTw": "格擋效能",
+   "nameJa": "ガード性能"
   },
   {
    "id": "guard_up",
@@ -465,7 +612,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "格挡强化",
+   "nameTw": "格擋強化",
+   "nameJa": "ガード強化"
   },
   {
    "id": "handicraft",
@@ -475,7 +625,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "匠",
+   "nameTw": "匠",
+   "nameJa": "匠"
   },
   {
    "id": "heroics",
@@ -484,7 +637,10 @@ window.TALISMAN_DATA = {
    "levels": [
     2,
     3
-   ]
+   ],
+   "nameZh": "火场怪力",
+   "nameTw": "火場怪力",
+   "nameJa": "火事場力"
   },
   {
    "id": "horn_maestro",
@@ -493,7 +649,10 @@ window.TALISMAN_DATA = {
    "levels": [
     1,
     2
-   ]
+   ],
+   "nameZh": "吹笛名人",
+   "nameTw": "吹笛名人",
+   "nameJa": "笛吹き名人"
   },
   {
    "id": "hunger_resistance",
@@ -503,7 +662,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "饥饿耐性",
+   "nameTw": "飢餓耐性",
+   "nameJa": "腹減り耐性"
   },
   {
    "id": "ice_attack",
@@ -513,7 +675,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "冰属性攻击强化",
+   "nameTw": "冰屬性攻擊強化",
+   "nameJa": "氷属性攻撃強化"
   },
   {
    "id": "ice_resistance",
@@ -523,7 +688,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "冰耐性",
+   "nameTw": "冰耐性",
+   "nameJa": "氷耐性"
   },
   {
    "id": "intimidator",
@@ -533,7 +701,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "威吓",
+   "nameTw": "威嚇",
+   "nameJa": "威嚇"
   },
   {
    "id": "iron_skin",
@@ -543,7 +714,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "防御力下降耐性",
+   "nameTw": "防禦力下降耐性",
+   "nameJa": "防御力DOWN耐性"
   },
   {
    "id": "item_prolonger",
@@ -553,7 +727,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "道具使用强化",
+   "nameTw": "道具使用強化",
+   "nameJa": "アイテム使用強化"
   },
   {
    "id": "latent_power",
@@ -561,7 +738,10 @@ window.TALISMAN_DATA = {
    "kind": "armor",
    "levels": [
     1
-   ]
+   ],
+   "nameZh": "力量解放",
+   "nameTw": "力量解放",
+   "nameJa": "力の解放"
   },
   {
    "id": "load_shells",
@@ -570,7 +750,10 @@ window.TALISMAN_DATA = {
    "levels": [
     1,
     2
-   ]
+   ],
+   "nameZh": "炮弹装填",
+   "nameTw": "炮彈裝填",
+   "nameJa": "砲弾装填"
   },
   {
    "id": "marathon_runner",
@@ -580,7 +763,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "跑者",
+   "nameTw": "跑者",
+   "nameJa": "ランナー"
   },
   {
    "id": "master_s_touch",
@@ -588,7 +774,10 @@ window.TALISMAN_DATA = {
    "kind": "weapon",
    "levels": [
     1
-   ]
+   ],
+   "nameZh": "达人艺",
+   "nameTw": "達人藝",
+   "nameJa": "達人芸"
   },
   {
    "id": "maximum_might",
@@ -597,7 +786,10 @@ window.TALISMAN_DATA = {
    "levels": [
     1,
     2
-   ]
+   ],
+   "nameZh": "精神抖擞",
+   "nameTw": "精神抖擻",
+   "nameJa": "渾身"
   },
   {
    "id": "mind_s_eye",
@@ -607,7 +799,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "心眼",
+   "nameTw": "心眼",
+   "nameJa": "心眼"
   },
   {
    "id": "mushroomancer",
@@ -616,7 +811,10 @@ window.TALISMAN_DATA = {
    "levels": [
     1,
     2
-   ]
+   ],
+   "nameZh": "最爱蘑菇",
+   "nameTw": "最愛蘑菇",
+   "nameJa": "キノコ大好き"
   },
   {
    "id": "normal_shots",
@@ -624,7 +822,10 @@ window.TALISMAN_DATA = {
    "kind": "weapon",
    "levels": [
     1
-   ]
+   ],
+   "nameZh": "通常弹·通常箭强化",
+   "nameTw": "通常彈·通常箭強化",
+   "nameJa": "通常弾・通常矢強化"
   },
   {
    "id": "offensive_guard",
@@ -634,7 +835,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "攻击守势",
+   "nameTw": "攻擊守勢",
+   "nameJa": "攻めの守勢"
   },
   {
    "id": "opening_shot",
@@ -644,7 +848,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "首发迅击",
+   "nameTw": "首發迅擊",
+   "nameJa": "ファーストショット"
   },
   {
    "id": "para_functionality",
@@ -652,7 +859,10 @@ window.TALISMAN_DATA = {
    "kind": "weapon",
    "levels": [
     1
-   ]
+   ],
+   "nameZh": "麻痹瓶追加",
+   "nameTw": "麻痺瓶追加",
+   "nameJa": "麻痺ビン追加"
   },
   {
    "id": "paralysis_attack",
@@ -662,7 +872,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "麻痹属性强化",
+   "nameTw": "麻痺屬性強化",
+   "nameJa": "麻痺属性強化"
   },
   {
    "id": "paralysis_resistance",
@@ -672,7 +885,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "麻痹耐性",
+   "nameTw": "麻痺耐性",
+   "nameJa": "麻痺耐性"
   },
   {
    "id": "partbreaker",
@@ -681,7 +897,10 @@ window.TALISMAN_DATA = {
    "levels": [
     1,
     2
-   ]
+   ],
+   "nameZh": "破坏王",
+   "nameTw": "破壞王",
+   "nameJa": "破壊王"
   },
   {
    "id": "peak_performance",
@@ -690,7 +909,10 @@ window.TALISMAN_DATA = {
    "levels": [
     1,
     2
-   ]
+   ],
+   "nameZh": "无伤",
+   "nameTw": "無傷",
+   "nameJa": "フルチャージ"
   },
   {
    "id": "piercing_shots",
@@ -698,7 +920,10 @@ window.TALISMAN_DATA = {
    "kind": "weapon",
    "levels": [
     1
-   ]
+   ],
+   "nameZh": "贯穿弹·龙之箭强化",
+   "nameTw": "貫穿彈·龍之箭強化",
+   "nameJa": "貫通弾・竜の矢強化"
   },
   {
    "id": "poison_attack",
@@ -708,7 +933,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "毒属性强化",
+   "nameTw": "毒屬性強化",
+   "nameJa": "毒属性強化"
   },
   {
    "id": "poison_duration_up",
@@ -716,7 +944,10 @@ window.TALISMAN_DATA = {
    "kind": "weapon",
    "levels": [
     1
-   ]
+   ],
+   "nameZh": "毒伤害强化",
+   "nameTw": "毒傷害強化",
+   "nameJa": "毒ダメージ強化"
   },
   {
    "id": "poison_functionality",
@@ -724,7 +955,10 @@ window.TALISMAN_DATA = {
    "kind": "weapon",
    "levels": [
     1
-   ]
+   ],
+   "nameZh": "毒瓶追加",
+   "nameTw": "毒瓶追加",
+   "nameJa": "毒ビン追加"
   },
   {
    "id": "poison_resistance",
@@ -734,7 +968,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "毒耐性",
+   "nameTw": "毒耐性",
+   "nameJa": "毒耐性"
   },
   {
    "id": "power_prolonger",
@@ -744,7 +981,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "强化持续",
+   "nameTw": "強化持續",
+   "nameJa": "強化持続"
   },
   {
    "id": "protective_polish",
@@ -754,7 +994,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "刚刃打磨",
+   "nameTw": "剛刃打磨",
+   "nameJa": "剛刃研磨"
   },
   {
    "id": "punishing_draw",
@@ -764,7 +1007,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "拔刀术【力】",
+   "nameTw": "拔刀術【力】",
+   "nameJa": "抜刀術"
   },
   {
    "id": "quick_sheathe",
@@ -774,7 +1020,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "纳刀术",
+   "nameTw": "納刀術",
+   "nameJa": "納刀術"
   },
   {
    "id": "rapid_fire_up",
@@ -782,7 +1031,10 @@ window.TALISMAN_DATA = {
    "kind": "weapon",
    "levels": [
     1
-   ]
+   ],
+   "nameZh": "速射强化",
+   "nameTw": "速射強化",
+   "nameJa": "速射強化"
   },
   {
    "id": "rapid_morph",
@@ -792,7 +1044,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "高速变形",
+   "nameTw": "高速變形",
+   "nameJa": "高速変形"
   },
   {
    "id": "razor_sharp",
@@ -802,7 +1057,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "利刃",
+   "nameTw": "利刃",
+   "nameJa": "業物"
   },
   {
    "id": "recovery_speed",
@@ -812,7 +1070,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "回复速度",
+   "nameTw": "回覆速度",
+   "nameJa": "回復速度"
   },
   {
    "id": "recovery_up",
@@ -822,7 +1083,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "体力回复量提升",
+   "nameTw": "體力回覆量提升",
+   "nameJa": "体力回復量UP"
   },
   {
    "id": "resentment",
@@ -831,7 +1095,10 @@ window.TALISMAN_DATA = {
    "levels": [
     1,
     2
-   ]
+   ],
+   "nameZh": "怨恨",
+   "nameTw": "怨恨",
+   "nameJa": "逆恨み"
   },
   {
    "id": "sleep_attack",
@@ -841,7 +1108,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "睡眠属性强化",
+   "nameTw": "睡眠屬性強化",
+   "nameJa": "睡眠属性強化"
   },
   {
    "id": "sleep_functionality",
@@ -849,7 +1119,10 @@ window.TALISMAN_DATA = {
    "kind": "weapon",
    "levels": [
     1
-   ]
+   ],
+   "nameZh": "睡眠瓶追加",
+   "nameTw": "睡眠瓶追加",
+   "nameJa": "睡眠ビン追加"
   },
   {
    "id": "sleep_resistance",
@@ -859,7 +1132,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "睡眠耐性",
+   "nameTw": "睡眠耐性",
+   "nameJa": "睡眠耐性"
   },
   {
    "id": "slugger",
@@ -869,7 +1145,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "击晕术",
+   "nameTw": "擊暈術",
+   "nameJa": "KO術"
   },
   {
    "id": "special_ammo_boost",
@@ -878,7 +1157,10 @@ window.TALISMAN_DATA = {
    "levels": [
     1,
     2
-   ]
+   ],
+   "nameZh": "特殊射击强化",
+   "nameTw": "特殊射擊強化",
+   "nameJa": "特殊射撃強化"
   },
   {
    "id": "speed_eating",
@@ -888,7 +1170,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "快吃",
+   "nameTw": "快吃",
+   "nameJa": "早食い"
   },
   {
    "id": "speed_sharpening",
@@ -897,7 +1182,10 @@ window.TALISMAN_DATA = {
    "levels": [
     1,
     2
-   ]
+   ],
+   "nameZh": "砥石使用高速化",
+   "nameTw": "砥石使用高速化",
+   "nameJa": "砥石使用高速化"
   },
   {
    "id": "spread_power_shots",
@@ -905,7 +1193,10 @@ window.TALISMAN_DATA = {
    "kind": "weapon",
    "levels": [
     1
-   ]
+   ],
+   "nameZh": "散弹·刚射强化",
+   "nameTw": "散彈·剛射強化",
+   "nameJa": "散弾・剛射強化"
   },
   {
    "id": "stamina_surge",
@@ -914,7 +1205,10 @@ window.TALISMAN_DATA = {
    "levels": [
     1,
     2
-   ]
+   ],
+   "nameZh": "耐力急速回复",
+   "nameTw": "耐力急速回復",
+   "nameJa": "スタミナ急速回復"
   },
   {
    "id": "stamina_thief",
@@ -924,7 +1218,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "夺取耐力",
+   "nameTw": "奪取耐力",
+   "nameJa": "スタミナ奪取"
   },
   {
    "id": "stench_resistance",
@@ -933,7 +1230,10 @@ window.TALISMAN_DATA = {
    "levels": [
     1,
     2
-   ]
+   ],
+   "nameZh": "恶臭耐性",
+   "nameTw": "惡臭耐性",
+   "nameJa": "悪臭耐性"
   },
   {
    "id": "stun_resistance",
@@ -943,7 +1243,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "昏厥耐性",
+   "nameTw": "昏厥耐性",
+   "nameJa": "気絶耐性"
   },
   {
    "id": "survival_expert",
@@ -953,7 +1256,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "环境利用知识",
+   "nameTw": "環境利用知識",
+   "nameJa": "環境利用の知識"
   },
   {
    "id": "tetrad_shot",
@@ -963,7 +1269,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "强四射击",
+   "nameTw": "強四射擊",
+   "nameJa": "フォースショット"
   },
   {
    "id": "thunder_attack",
@@ -973,7 +1282,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "雷属性攻击强化",
+   "nameTw": "雷屬性攻擊強化",
+   "nameJa": "雷属性攻撃強化"
   },
   {
    "id": "thunder_resistance",
@@ -983,7 +1295,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "雷耐性",
+   "nameTw": "雷耐性",
+   "nameJa": "雷耐性"
   },
   {
    "id": "tool_specialist",
@@ -992,7 +1307,10 @@ window.TALISMAN_DATA = {
    "levels": [
     2,
     3
-   ]
+   ],
+   "nameZh": "整备",
+   "nameTw": "整備",
+   "nameJa": "整備"
   },
   {
    "id": "tremor_resistance",
@@ -1002,7 +1320,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "耐震",
+   "nameTw": "耐震",
+   "nameJa": "耐震"
   },
   {
    "id": "water_attack",
@@ -1012,7 +1333,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "水属性攻击强化",
+   "nameTw": "水屬性攻擊強化",
+   "nameJa": "水属性攻撃強化"
   },
   {
    "id": "water_resistance",
@@ -1022,7 +1346,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "水耐性",
+   "nameTw": "水耐性",
+   "nameJa": "水耐性"
   },
   {
    "id": "weakness_exploit",
@@ -1030,7 +1357,10 @@ window.TALISMAN_DATA = {
    "kind": "armor",
    "levels": [
     1
-   ]
+   ],
+   "nameZh": "弱点特效",
+   "nameTw": "弱點特效",
+   "nameJa": "弱点特効"
   },
   {
    "id": "wide_range",
@@ -1040,7 +1370,10 @@ window.TALISMAN_DATA = {
     2,
     3,
     4
-   ]
+   ],
+   "nameZh": "广域化",
+   "nameTw": "廣域化",
+   "nameJa": "広域化"
   },
   {
    "id": "windproof",
@@ -1050,7 +1383,10 @@ window.TALISMAN_DATA = {
     1,
     2,
     3
-   ]
+   ],
+   "nameZh": "风压耐性",
+   "nameTw": "風壓耐性",
+   "nameJa": "風圧耐性"
   }
  ],
  "groups": [
@@ -2444,7 +2780,10 @@ window.TALISMAN_DATA = {
       1
      ]
     }
-   ]
+   ],
+   "nameZh": "未知护石",
+   "nameTw": "未知護石",
+   "nameJa": "未解の護石"
   },
   "R6": {
    "weight": 0.27,
@@ -2652,7 +2991,10 @@ window.TALISMAN_DATA = {
       1
      ]
     }
-   ]
+   ],
+   "nameZh": "历史护石",
+   "nameTw": "歷史護石",
+   "nameJa": "史伝の護石"
   },
   "R7": {
    "weight": 0.11,
@@ -2849,7 +3191,10 @@ window.TALISMAN_DATA = {
       1
      ]
     }
-   ]
+   ],
+   "nameZh": "秘密护石",
+   "nameTw": "秘密護石",
+   "nameJa": "秘歴の護石"
   },
   "R8": {
    "weight": 0.03,
@@ -3062,7 +3407,10 @@ window.TALISMAN_DATA = {
       17
      ]
     }
-   ]
+   ],
+   "nameZh": "黄金时代护石",
+   "nameTw": "黃金時代護石",
+   "nameJa": "栄世の護石"
   }
  }
 };
