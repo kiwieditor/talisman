@@ -14,7 +14,7 @@ self.onmessage = function (e) {
   var core = self.GogmaCore;
   core.searchSlice(
     d.weaponType, d.attributeForce, d.indices,
-    d.counterStart, d.counterEnd, d.seedStart, d.seedEnd,
+    d.counterStart, d.counterEnd, d.seedStart, d.seedEnd, d.seedStep || 1,
     function (seed, counter) {
       self.postMessage({ type: "candidate", id: d.id, seed: seed, counter: counter });
     },

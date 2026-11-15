@@ -77,10 +77,11 @@
    * onProgress(seedsDoneInSlice) fires every CHUNK_SEEDS seeds.
    * Returns the number of seeds processed. */
   function searchSlice(weaponType, attributeForce, indices, counterStart, counterEnd,
-                       seedStart, seedEnd, onCandidate, onProgress) {
+                       seedStart, seedEnd, seedStep, onCandidate, onProgress) {
     var K = indices.length, o0 = indices[0];
+    var step = seedStep || 1;
     var processed = 0, sinceReport = 0;
-    for (var base = seedStart; base <= seedEnd; base++) {
+    for (var base = seedStart; base <= seedEnd; base += step) {
       var seed = ((base + weaponType * 1000 + attributeForce) >>> 0) ^ SEED_XOR_MASK;
       var ss = seed >>> 0;
       var x = 0x159A55E5, y = 0x1F123BB5, z = 0x05491333, w = 0x05491333;
@@ -160,7 +161,7 @@
     // step 1
     wType: 10, attrIdx: 3, k: 6,
     obs: [],              // [{set:-1, group:-1} x k]
-    searching: false, deep: false, candidates: [], searchDone: false, searchMax: DEFAULT_COUNTER_END,
+    searching: false, deep: false, candidates: [], searchDone: false, searchMax: DEFAULT_COUNTER_END, autoPicked: false,
     // step 2 (persisted)
     seed: null, counter: null, colWType: 10, colAttrIdx: 3,
     targetSet: -1, targetGroup: -1, shown: 100, undoAvailable: false, lastK: 6,
@@ -225,14 +226,25 @@
       sel.addEventListener("change", function () {
         S.obs[+sel.getAttribute("data-obs-set")].set = +sel.value;
         renderObsRows();
+        clearWarnIfComplete();
       });
     });
     wrap.querySelectorAll("select[data-obs-group]").forEach(function (sel) {
       sel.addEventListener("change", function () {
         S.obs[+sel.getAttribute("data-obs-group")].group = +sel.value;
         renderObsRows();
+        clearWarnIfComplete();
       });
     });
+  }
+
+  function clearWarnIfComplete() {
+    var box = $("gogmaSearchResult");
+    if (!box || !box.getAttribute("data-warn")) return;
+    if (S.obs.every(function (r) { return r.set >= 0 && r.group >= 0; })) {
+      box.innerHTML = "";
+      box.removeAttribute("data-warn");
+    }
   }
 
   function setK(k) {
@@ -244,6 +256,11 @@
 
   /* ---------- seed search orchestration ---------- */
   var workers = [], searchId = 0, aggDone = 0, aggTotal = SEED_MAX + 1;
+  // Counter bands, searched in order: most saves sit at low counters, so the
+  // first band is ~4x cheaper per seed than the full 0-99 pass.
+  var BANDS_STD = [[0, 24], [25, 99]];
+  var BANDS_DEEP = [[100, 249], [250, 499]];
+  var curBands = BANDS_STD, curBand = 0, curIndices = null;
 
   function stopWorkers() {
     workers.forEach(function (w) { try { w.terminate(); } catch (e) {} });
@@ -254,32 +271,45 @@
     var indices = [];
     for (var i = 0; i < S.k; i++) {
       if (S.obs[i].set < 0 || S.obs[i].group < 0) {
-        $("gogmaSearchResult").innerHTML = '<p class="gogma-warn">' + esc(t("gogma_incomplete")) + "</p>";
+        var wbox = $("gogmaSearchResult");
+        wbox.innerHTML = '<p class="gogma-warn">' + esc(t("gogma_incomplete")) + "</p>";
+        wbox.setAttribute("data-warn", "1");
         return;
       }
       indices.push(S.obs[i].set * 14 + S.obs[i].group);
     }
+    curIndices = indices;
     stopWorkers();
-    S.searching = true; S.deep = deep; S.candidates = []; S.searchDone = false;
-    S.searchMax = deep ? DEEP_COUNTER_END : DEFAULT_COUNTER_END;
-    aggDone = 0;
-    var cStart = deep ? DEEP_COUNTER_START : DEFAULT_COUNTER_START;
-    var cEnd = deep ? DEEP_COUNTER_END : DEFAULT_COUNTER_END;
-    var id = ++searchId;
-    $("gogmaProgress").hidden = false;
-    $("gogmaProgressFill").style.width = "0%";
-    $("gogmaProgressText").textContent = t("gogma_searching", { pct: 0 });
+    S.searching = true; S.deep = deep; S.candidates = []; S.searchDone = false; S.autoPicked = false;
+    curBands = deep ? BANDS_DEEP : BANDS_STD;
+    S.searchMax = curBands[curBands.length - 1][1];
     $("gogmaSearchResult").innerHTML = "";
+    $("gogmaSearchResult").removeAttribute("data-warn");
     $("gogmaDeepRow").hidden = true;
     $("gogmaFind").disabled = true;
     $("gogmaCancel").hidden = false;
+    runBand(0);
+  }
 
+  function setProgressText(pct) {
+    $("gogmaProgressFill").style.width = pct + "%";
+    $("gogmaProgressText").textContent = t("gogma_searching", { pct: pct }) + " — " +
+      t("gogma_band", { a: curBands[curBand][0], b: curBands[curBand][1] });
+  }
+
+  function runBand(bi) {
+    curBand = bi;
+    aggDone = 0;
+    var id = ++searchId;
+    var cStart = curBands[bi][0], cEnd = curBands[bi][1];
+    $("gogmaProgress").hidden = false;
+    setProgressText(0);
+    // Striped assignment: every worker strides across the whole seed range,
+    // so a match surfaces as soon as ANY worker reaches it, wherever it sits.
     var W = Math.min(8, (navigator.hardwareConcurrency || 4));
     var finished = 0;
     for (var wi = 0; wi < W; wi++) {
       (function (wi) {
-        var seedStart = Math.floor(wi * aggTotal / W);
-        var seedEnd = Math.floor((wi + 1) * aggTotal / W) - 1;
         var wk = new Worker("js/gogma-worker.js");
         var lastDone = 0;
         wk.onmessage = function (e) {
@@ -287,25 +317,33 @@
           if (d.id !== id) return;
           if (d.type === "progress") {
             aggDone += d.done - lastDone; lastDone = d.done;
-            var pct = Math.min(100, Math.floor(aggDone / aggTotal * 100));
-            $("gogmaProgressFill").style.width = pct + "%";
-            $("gogmaProgressText").textContent = t("gogma_searching", { pct: pct });
+            setProgressText(Math.min(100, Math.floor(aggDone / aggTotal * 100)));
           } else if (d.type === "candidate") {
-            S.candidates.push({ seed: d.seed, counter: d.counter });
+            var cand = { seed: d.seed, counter: d.counter };
+            S.candidates.push(cand);
+            if (!S.autoPicked) { S.autoPicked = true; selectCandidate(cand, true); }
             renderCandidates();
           } else if (d.type === "done") {
             finished++;
-            if (finished === W) finishSearch();
+            if (finished === W) bandDone();
           }
         };
-        wk.onerror = function () { finished++; if (finished === W) finishSearch(); };
+        wk.onerror = function () { finished++; if (finished === W) bandDone(); };
         workers.push(wk);
         wk.postMessage({
           type: "search", id: id, weaponType: S.wType, attributeForce: forceOf(S.attrIdx),
-          indices: indices, counterStart: cStart, counterEnd: cEnd, seedStart: seedStart, seedEnd: seedEnd,
+          indices: curIndices, counterStart: cStart, counterEnd: cEnd,
+          seedStart: wi, seedEnd: SEED_MAX, seedStep: W,
         });
       })(wi);
     }
+  }
+
+  function bandDone() {
+    if (!S.searching) return; // cancelled meanwhile
+    if (S.candidates.length > 0 || curBand >= curBands.length - 1) { finishSearch(); return; }
+    stopWorkers();
+    runBand(curBand + 1);
   }
 
   function finishSearch() {
@@ -319,7 +357,7 @@
       $("gogmaSearchResult").innerHTML = '<p class="gogma-warn">' +
         esc(t(S.deep ? "gogma_notfound_deep" : "gogma_notfound", { max: S.searchMax })) + "</p>";
       $("gogmaDeepRow").hidden = S.deep;
-    } else if (S.candidates.length === 1) {
+    } else if (S.candidates.length === 1 && !S.autoPicked) {
       selectCandidate(S.candidates[0], true);
     }
   }
@@ -327,19 +365,37 @@
   function renderCandidates() {
     if (!S.candidates.length) return;
     var box = $("gogmaSearchResult");
+    box.removeAttribute("data-warn");
+    if (S.searching) {
+      var hs = '<p class="gogma-found">' + esc(t("gogma_found_searching", {
+        seed: fmtInt(S.candidates[0].seed),
+      })) + "</p>";
+      if (S.candidates.length > 1) hs += candidatesChipsHTML();
+      box.innerHTML = hs;
+      wireCandidateChips(box);
+      return;
+    }
     if (S.candidates.length === 1 && S.searchDone) {
       box.innerHTML = '<p class="gogma-found">' + esc(t("gogma_found_one", {
         seed: fmtInt(S.candidates[0].seed), n: S.candidates[0].counter + S.k,
       })) + "</p>";
       return;
     }
-    var h = '<p class="gogma-found">' + esc(t("gogma_found_multi", { n: S.candidates.length })) + "</p><div class=\"gogma-candidates\">";
+    box.innerHTML = '<p class="gogma-found">' + esc(t("gogma_found_multi", { n: S.candidates.length })) + "</p>" + candidatesChipsHTML();
+    wireCandidateChips(box);
+  }
+
+  function candidatesChipsHTML() {
+    var h = '<div class="gogma-candidates">';
     S.candidates.forEach(function (c, i) {
       h += '<button class="chip" data-cand="' + i + '">' + esc(t("gogma_candidate_btn", {
         seed: fmtInt(c.seed), n: c.counter + S.k,
       })) + "</button>";
     });
-    box.innerHTML = h + "</div>";
+    return h + "</div>";
+  }
+
+  function wireCandidateChips(box) {
     box.querySelectorAll("[data-cand]").forEach(function (b) {
       b.addEventListener("click", function () { selectCandidate(S.candidates[+b.getAttribute("data-cand")], false); });
     });
@@ -356,7 +412,7 @@
     S.shown = 100;
     persist();
     renderPlanner();
-    if (!auto) {
+    if (!auto && !S.searching) {
       $("gogmaSearchResult").innerHTML = '<p class="gogma-found">' + esc(t("gogma_found_one", {
         seed: fmtInt(cand.seed), n: cand.counter + S.k,
       })) + "</p>";
