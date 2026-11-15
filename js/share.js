@@ -4,8 +4,8 @@
 
   var SITE_NAME = "Wilds Talisman Calculator · talisman.kiwieditor.com";
 
-  function slotText(slots) {
-    if (!slots || slots.length === 0) return "Any slots";
+  function slotText(slots, labels) {
+    if (!slots || slots.length === 0) return (labels && labels.anySlots) || "Any slots";
     return slots.map(function (s) { return s === -1 ? "[W]" : "[" + s + "]"; }).join(" ");
   }
 
@@ -49,10 +49,11 @@
     ctx.fillText("MONSTER HUNTER WILDS", 128, 84);
     ctx.fillStyle = "#9aa5b1";
     ctx.font = "600 22px 'Segoe UI', system-ui, sans-serif";
-    ctx.fillText(model.rarityName ? model.rarityName + " — talisman odds check" : "Talisman odds check", 128, 116);
+    var L = model.labels || {};
+    ctx.fillText(model.rarityName ? model.rarityName + (L.oddsSuffix || " — talisman odds check") : (L.check || "Talisman odds check"), 128, 116);
 
     // verdict pill
-    var pillText = model.legal ? "✓ CAN ROLL — IT EXISTS" : "✕ CANNOT ROLL — IMPOSSIBLE COMBO";
+    var pillText = model.legal ? (L.canRoll || "✓ CAN ROLL — IT EXISTS") : (L.cannotRoll || "✕ CANNOT ROLL — IMPOSSIBLE COMBO");
     ctx.font = "800 24px 'Segoe UI', system-ui, sans-serif";
     var pillW = ctx.measureText(pillText).width + 44;
     ctx.fillStyle = model.legal ? "rgba(87,199,133,0.16)" : "rgba(224,101,95,0.16)";
@@ -76,7 +77,7 @@
     });
     ctx.fillStyle = "#9aa5b1";
     ctx.font = "600 26px 'Segoe UI', system-ui, sans-serif";
-    ctx.fillText("Slots: " + slotText(model.slots), 70, y + 6);
+    ctx.fillText((L.slots || "Slots: ") + slotText(model.slots, L), 70, y + 6);
 
     if (model.legal) {
       ctx.fillStyle = "#e8b34b";
@@ -84,12 +85,12 @@
       ctx.fillText("1 in " + model.oneInText, 70, 520);
       ctx.fillStyle = "#9aa5b1";
       ctx.font = "600 26px 'Segoe UI', system-ui, sans-serif";
-      ctx.fillText(model.pctText + " per appraisal  ·  ≈ " + model.hoursText + " of grinding", 72, 562);
+      ctx.fillText(model.pctText + " " + (L.per || ("per appraisal  ·  ≈ " + model.hoursText + " of grinding")), 72, 562);
     } else {
       ctx.fillStyle = "#9aa5b1";
       ctx.font = "600 27px 'Segoe UI', system-ui, sans-serif";
-      ctx.fillText("No template in the game can hold this combination.", 70, 500);
-      ctx.fillText("Don't waste your melding points on it.", 70, 542);
+      ctx.fillText(L.illegal1 || "No template in the game can hold this combination.", 70, 500);
+      ctx.fillText(L.illegal2 || "Don't waste your melding points on it.", 70, 542);
     }
 
     // footer watermark
@@ -97,7 +98,7 @@
     ctx.font = "700 22px 'Segoe UI', system-ui, sans-serif";
     ctx.fillText(SITE_NAME, 70, H - 42);
     ctx.textAlign = "right";
-    ctx.fillText("Exact odds · No guesswork", W - 70, H - 42);
+    ctx.fillText(L.footerR || "Exact odds · No guesswork", W - 70, H - 42);
     ctx.textAlign = "left";
 
     return canvas;

@@ -1,16 +1,18 @@
-/* Wilds Talisman Calculator — UI wiring. Vanilla JS, no framework. */
+/* Wilds Talisman Calculator — UI wiring. Vanilla JS, no framework. i18n via window.I18N. */
 (function () {
   "use strict";
 
   var data = window.TALISMAN_DATA;
   var calc = window.TalismanCalc;
+  var I = window.I18N;
   var index = calc.buildIndex(data);
   var skillById = {};
-  data.skills.forEach(function (s) { skillById[s.id] = s; });
+  var skillByName = {};
+  data.skills.forEach(function (s) { skillById[s.id] = s; skillByName[s.name] = s; });
 
   var SHOP_URL = "https://kiwigg.com/products/monster-hunter-wilds-ps5-save-edit-service-we-edit-your-save";
   var SLOT_PATTERNS = [
-    { label: "Any", slots: [] },
+    { label: "", slots: [] },
     { label: "[1]", slots: [1] },
     { label: "[1][1]", slots: [1, 1] },
     { label: "[2]", slots: [2] },
@@ -21,9 +23,9 @@
     { label: "[W][1][1]", slots: [-1, 1, 1] },
   ];
   var PACES = [
-    { label: "Casual · 20/h", perHour: 20 },
-    { label: "Focused · 40/h", perHour: 40 },
-    { label: "No-life · 80/h", perHour: 80 },
+    { key: "pace_20", perHour: 20 },
+    { key: "pace_40", perHour: 40 },
+    { key: "pace_80", perHour: 80 },
   ];
 
   var state = {
@@ -33,17 +35,21 @@
   };
 
   var $ = function (sel) { return document.querySelector(sel); };
+  function t(key, vars) { return I.t(key, vars); }
+  function punct() { return I.lang === "en" ? "." : "。"; }
+  function sName(skill) { return I.skillName(skill); }
+  function sNameEn(enName) { return I.skillNameByEn(enName, skillByName); }
 
   /* ---------- skill rows ---------- */
   function skillOptions(selectedId, excludeIds) {
-    var html = '<option value="">— Choose a skill —</option>';
-    [["weapon", "Weapon skills"], ["armor", "Armor skills"], ["both", "Weapon & armor skills"]].forEach(function (pair) {
+    var html = '<option value="">' + t("choose_skill") + "</option>";
+    [["weapon", "group_weapon"], ["armor", "group_armor"], ["both", "group_both"]].forEach(function (pair) {
       var group = data.skills.filter(function (s) { return s.kind === pair[0]; });
       if (!group.length) return;
-      html += '<optgroup label="' + pair[1] + '">';
+      html += '<optgroup label="' + t(pair[1]) + '">';
       group.forEach(function (s) {
         var dis = excludeIds.indexOf(s.id) !== -1 && s.id !== selectedId ? " disabled" : "";
-        html += '<option value="' + s.id + '"' + (s.id === selectedId ? " selected" : "") + dis + ">" + s.name + "</option>";
+        html += '<option value="' + s.id + '"' + (s.id === selectedId ? " selected" : "") + dis + ">" + sName(s) + "</option>";
       });
       html += "</optgroup>";
     });
@@ -59,13 +65,13 @@
       div.className = "skill-row" + (row.skill ? " filled" : "");
       var levels = row.skill ? skillById[row.skill].levels : [];
       div.innerHTML =
-        '<div class="skill-row-head"><span class="skill-row-label">Skill ' + (i + 1) + "</span>" +
+        '<div class="skill-row-head"><span class="skill-row-label">' + t("skill_n", { n: i + 1 }) + "</span>" +
         (row.skill ? '<button class="skill-clear" data-clear="' + i + '" aria-label="Clear skill ' + (i + 1) + '">×</button>' : "") +
         "</div>" +
         '<div class="skill-controls">' +
         '<select data-skill="' + i + '" aria-label="Skill ' + (i + 1) + '">' + skillOptions(row.skill, others) + "</select>" +
         '<select data-level="' + i + '" aria-label="Level for skill ' + (i + 1) + '"' + (row.skill ? "" : " disabled") + ">" +
-        (row.skill ? levels.map(function (lv) { return '<option value="' + lv + '"' + (lv === row.level ? " selected" : "") + ">Lv " + lv + "</option>"; }).join("") : '<option>Lv —</option>') +
+        (row.skill ? levels.map(function (lv) { return '<option value="' + lv + '"' + (lv === row.level ? " selected" : "") + ">Lv " + lv + "</option>"; }).join("") : "<option>Lv —</option>") +
         "</select></div>";
       wrap.appendChild(div);
     });
@@ -74,7 +80,7 @@
         var i = +sel.getAttribute("data-skill");
         var id = sel.value;
         state.rows[i].skill = id;
-        state.rows[i].level = id ? skillById[id].levels[skillById[id].levels.length - 1] : null; // default to max level
+        state.rows[i].level = id ? skillById[id].levels[skillById[id].levels.length - 1] : null;
         renderRows(); renderResult();
       });
     });
@@ -107,7 +113,7 @@
   }
   function renderSlotChips() {
     renderChips("#slotChips", SLOT_PATTERNS.map(function (p) {
-      return { label: p.label, slots: p.slots, html: p.slots.length ? '<span class="slot-glyph">' + p.label.replace(/\[W\]/g, '<span class="w-chip">W</span>') + "</span>" : "Any slots" };
+      return { label: p.label, slots: p.slots, html: p.slots.length ? '<span class="slot-glyph">' + p.label.replace(/\[W\]/g, '<span class="w-chip">W</span>') + "</span>" : t("any_slots") };
     }), function (item) {
       return JSON.stringify(item.slots) === JSON.stringify(state.slots);
     }, function (item) {
@@ -116,10 +122,11 @@
     });
   }
   function renderPaceChips() {
-    renderChips("#paceChips", PACES, function (item) { return item.perHour === state.pace; }, function (item) {
-      state.pace = item.perHour;
-      renderPaceChips(); renderResult();
-    });
+    renderChips("#paceChips", PACES.map(function (p) { return { label: t(p.key), perHour: p.perHour }; }),
+      function (item) { return item.perHour === state.pace; }, function (item) {
+        state.pace = item.perHour;
+        renderPaceChips(); renderResult();
+      });
   }
 
   /* ---------- formatting ---------- */
@@ -130,21 +137,13 @@
     return (p * 100).toFixed(6) + "%";
   }
   function fmtHours(h) {
-    if (h < 1) return Math.round(h * 60) + " min";
-    if (h < 48) return (Math.round(h * 10) / 10).toLocaleString("en-US") + " hours";
+    if (h < 1) return t("u_min", { n: Math.round(h * 60) });
+    if (h < 48) return t("u_hours", { n: (Math.round(h * 10) / 10).toLocaleString("en-US") });
     var days = h / 24;
-    if (days < 365) return (Math.round(days * 10) / 10).toLocaleString("en-US") + " days of non-stop grinding";
-    return (Math.round((days / 365) * 10) / 10).toLocaleString("en-US") + " years of non-stop grinding";
+    if (days < 365) return t("u_days", { n: (Math.round(days * 10) / 10).toLocaleString("en-US") });
+    return t("u_years", { n: (Math.round((days / 365) * 10) / 10).toLocaleString("en-US") });
   }
-  function slotGlyphs(slots) {
-    if (!slots || !slots.length) return "any slots";
-    return slots.map(function (s) { return s === -1 ? '<span class="w-chip">W</span>' : "[" + s + "]"; }).join(" ");
-  }
-  var GROUP_SHORT = {
-    G1: "Weapon T1", G2: "Weapon T2", G3: "Weapon T3", G4: "Weapon T4",
-    G5: "Armor 1-slot (low)", G6: "Armor 1-slot (mid)", G7: "Armor 1-slot (high)",
-    G8: "Armor 2-slot (low)", G9: "Armor 2-slot (high)", G10: "Armor 3-slot",
-  };
+  function groupShort(g) { return t("g_" + g); }
 
   /* ---------- talisman preview card ---------- */
   function gemSVG() {
@@ -166,18 +165,18 @@
       var rk = res.best.rarity;
       cls = "gem-" + rk.toLowerCase();
       rarityClass = rk.toLowerCase();
-      name = data.rarities[rk].name;
-      rarityLabel = rk + " · " + Math.round(data.rarities[rk].weight * 100) + "% of appraisals";
+      name = I.charmName(data.rarities[rk]);
+      rarityLabel = rk + " · " + Math.round(data.rarities[rk].weight * 100) + "% " + t("of_appraisals");
     } else {
-      cls = "gem-bad"; rarityClass = ""; name = "Appraised Talisman";
-      rarityLabel = "Not in the game's tables";
+      cls = "gem-bad"; rarityClass = ""; name = t("appraised_talisman");
+      rarityLabel = t("not_in_tables");
     }
-    var skills = targets.map(function (t) {
-      return '<div class="t-skill"><span>' + skillById[t.skill].name + "</span>" + pipsHTML(t.level) + "</div>";
+    var skills = targets.map(function (tg) {
+      return '<div class="t-skill"><span>' + sName(skillById[tg.skill]) + "</span>" + pipsHTML(tg.level) + "</div>";
     }).join("");
     var slots = state.slots.length
       ? state.slots.map(function (s) { return '<span class="slot-box' + (s === -1 ? " w" : "") + '">' + (s === -1 ? "W" : s) + "</span>"; }).join("")
-      : '<span>Any decoration slots</span>';
+      : "<span>" + t("any_deco_slots") + "</span>";
     return '<div class="talisman-card"><div class="gem-wrap ' + cls + '">' + gemSVG() + "</div>" +
       '<div class="talisman-meta"><div class="talisman-name">' + name + "</div>" +
       '<div class="talisman-rarity ' + rarityClass + '">' + rarityLabel + "</div>" +
@@ -192,7 +191,7 @@
     el._countToken = token;
     var dur = 650, t0 = null;
     function step(ts) {
-      if (el._countToken !== token) return; // superseded by a newer render
+      if (el._countToken !== token) return;
       if (!t0) t0 = ts;
       var k = Math.min(1, (ts - t0) / dur);
       var eased = 1 - Math.pow(1 - k, 3);
@@ -229,34 +228,33 @@
     var res = calc.calculate(data, index, targets, state.slots);
 
     if (!res.legal) {
-      var why = targets.map(function (t) {
-        var pools = res.skillPools[t.skill].map(function (g) { return GROUP_SHORT[g]; }).join(", ");
-        return "<li><strong>" + skillById[t.skill].name + " Lv" + t.level + "</strong> can only roll from: " + pools + ".</li>";
+      var why = targets.map(function (tg) {
+        var pools = res.skillPools[tg.skill].map(groupShort).join(", ");
+        return "<li><strong>" + sName(skillById[tg.skill]) + " Lv" + tg.level + "</strong> " + t("can_only_roll") + " " + pools + punct() + "</li>";
       }).join("");
-      // leave-one-out fix hint
       var fix = "";
       if (targets.length > 1) {
         for (var i = 0; i < targets.length; i++) {
           var rest = targets.filter(function (_, j) { return j !== i; });
           if (calc.calculate(data, index, rest, state.slots).legal) {
-            fix = '<div class="fix-hint">Drop <strong>' + skillById[targets[i].skill].name + " Lv" + targets[i].level + "</strong> and the rest can roll. No template in the game combines all of these pools at once" + (state.slots.length ? " with that slot layout" : "") + ".</div>";
+            fix = '<div class="fix-hint">' + t("fix_drop", { name: sName(skillById[targets[i].skill]), lv: targets[i].level }) + (state.slots.length ? t("fix_with_slots") : "") + punct() + "</div>";
             break;
           }
         }
         if (!fix && state.slots.length) {
           if (calc.calculate(data, index, targets, []).legal) {
-            fix = '<div class="fix-hint">The skills themselves can roll together — it\'s the <strong>slot layout</strong> that can\'t. Try “Any slots”.</div>';
+            fix = '<div class="fix-hint">' + t("fix_slots_skills") + "</div>";
           }
         }
       } else if (state.slots.length && calc.calculate(data, index, targets, []).legal) {
-        fix = '<div class="fix-hint">The skill can roll — just never with that <strong>slot layout</strong>. Try “Any slots”.</div>';
+        fix = '<div class="fix-hint">' + t("fix_slots_skill") + "</div>";
       }
       body.innerHTML =
         previewHTML(targets, res) +
-        '<span class="verdict illegal">✕ Cannot roll</span>' +
-        '<div class="illegal-why">This combination does not exist in the game\'s talisman tables. No amount of melding will produce it.<ul>' + why + "</ul></div>" +
+        '<span class="verdict illegal">' + t("verdict_illegal") + "</span>" +
+        '<div class="illegal-why">' + t("illegal_why") + "<ul>" + why + "</ul></div>" +
         fix +
-        '<div class="share-row"><button class="btn-share" id="btnShare">Download share image</button></div>';
+        '<div class="share-row"><button class="btn-share" id="btnShare">' + t("share_btn") + "</button></div>";
       wireShare(targets, res, null);
       return;
     }
@@ -266,30 +264,30 @@
     var bars = ["R5", "R6", "R7", "R8"].map(function (rk) {
       var v = res.byRarity[rk];
       var w = maxR > 0 ? Math.max(2, (v / maxR) * 100) : 0;
-      return '<div class="rbar"><span class="tag ' + rk.toLowerCase() + '">' + rk + '</span><span class="track"><span class="fill ' + rk.toLowerCase() + '" data-w="' + (v > 0 ? w : 0) + '" style="display:block"></span></span><span class="val">' + (v > 0 ? (v / res.probability * 100).toFixed(1) + "% of hits" : "—") + "</span></div>";
+      return '<div class="rbar"><span class="tag ' + rk.toLowerCase() + '">' + rk + '</span><span class="track"><span class="fill ' + rk.toLowerCase() + '" data-w="' + (v > 0 ? w : 0) + '" style="display:block"></span></span><span class="val">' + (v > 0 ? (v / res.probability * 100).toFixed(1) + "% " + t("of_hits") : "—") + "</span></div>";
     }).join("");
 
     var brutal = res.oneIn >= 10000;
     var bridge =
       '<div class="bridge' + (brutal ? " brutal" : "") + '">' +
-      "<p>" + (brutal ? "That is a <em>lot</em> of melding points. " : "") + "Playing on PS5? Get this exact talisman on your own save — skip the grind.</p>" +
-      '<p class="bridge-sub">We edit <strong>your own save</strong> — your hunter, progress and gear stay exactly as they are. Nothing is replaced. Use code <span class="code">KIWI10</span> for 10% off.</p>' +
-      '<a class="cta" href="' + SHOP_URL + '" target="_blank" rel="noopener">Get it on your save →</a>' +
+      "<p>" + (brutal ? t("bridge_brutal") : "") + t("bridge_p") + "</p>" +
+      '<p class="bridge-sub">' + t("bridge_sub") + "</p>" +
+      '<a class="cta" href="' + SHOP_URL + '" target="_blank" rel="noopener">' + t("bridge_cta") + "</a>" +
       "</div>";
 
     body.innerHTML =
       previewHTML(targets, res) +
-      '<span class="verdict legal">✓ Legal — it can roll</span>' +
+      '<span class="verdict legal">' + t("verdict_legal") + "</span>" +
       '<div class="odds-big"><small>1 in&nbsp;</small><span id="oddsNum">0</span></div>' +
-      '<div class="odds-pct">' + fmtPct(res.probability) + " chance per appraised talisman</div>" +
+      '<div class="odds-pct">' + fmtPct(res.probability) + " " + t("pct_per") + "</div>" +
       '<div class="grind">' +
-      '<div class="grind-box"><div class="num" id="apprNum">0</div><div class="lbl">expected appraisals to hit it once</div></div>' +
-      '<div class="grind-box"><div class="num">' + fmtHours(grind.hours) + '</div><div class="lbl">expected grind at your pace (' + state.pace + "/h)</div></div>" +
+      '<div class="grind-box"><div class="num" id="apprNum">0</div><div class="lbl">' + t("expected_appraisals") + "</div></div>" +
+      '<div class="grind-box"><div class="num">' + fmtHours(grind.hours) + '</div><div class="lbl">' + t("expected_grind", { n: state.pace }) + "</div></div>" +
       "</div>" +
-      '<div class="rarity-bars"><h4>Where the hit comes from</h4>' + bars + "</div>" +
-      '<div class="best-line"><h4>Most likely route</h4><strong>' + res.best.rarity + "</strong> · " + res.best.groups.map(function (g) { return GROUP_SHORT[g]; }).join(" + ") + "</div>" +
+      '<div class="rarity-bars"><h4>' + t("where_hit") + "</h4>" + bars + "</div>" +
+      '<div class="best-line"><h4>' + t("most_likely") + "</h4><strong>" + res.best.rarity + "</strong> · " + res.best.groups.map(groupShort).join(" + ") + "</div>" +
       bridge +
-      '<div class="share-row"><button class="btn-share" id="btnShare">Download share image</button></div>';
+      '<div class="share-row"><button class="btn-share" id="btnShare">' + t("share_btn") + "</button></div>";
 
     countUp($("#oddsNum"), Math.round(res.oneIn));
     countUp($("#apprNum"), grind.appraisals);
@@ -303,17 +301,76 @@
     btn.addEventListener("click", function () {
       window.TalismanShare.share({
         legal: res.legal,
-        rarityName: res.legal ? data.rarities[res.best.rarity].name : "",
-        skills: targets.map(function (t) { return { name: skillById[t.skill].name, level: t.level }; }),
+        rarityName: res.legal ? I.charmName(data.rarities[res.best.rarity]) : "",
+        skills: targets.map(function (tg) { return { name: sName(skillById[tg.skill]), level: tg.level }; }),
         slots: state.slots,
         oneInText: res.legal ? fmtInt(Math.round(res.oneIn)) : "",
         pctText: res.legal ? fmtPct(res.probability) : "",
         hoursText: grind ? fmtHours(grind.hours) : "",
+        labels: {
+          canRoll: t("share_can_roll"), cannotRoll: t("share_cannot_roll"),
+          oddsSuffix: t("share_odds_suffix"), check: t("share_check"), slots: t("share_slots"),
+          illegal1: t("share_illegal1"), illegal2: t("share_illegal2"),
+          per: t("share_per", { h: grind ? fmtHours(grind.hours) : "" }),
+          footerR: t("share_footer_r"), anySlots: t("any_slots"),
+        },
       });
     });
   }
 
   /* ---------- builds ---------- */
+  function decoChips(list) {
+    return '<span class="deco-chips">' + list.map(function (d) { return '<span class="deco-chip">' + d + "</span>"; }).join("") + "</span>";
+  }
+  function skillLine(pairs) {
+    return pairs.map(function (p) { return sNameEn(p[0]) + " " + p[1]; }).join(" · ");
+  }
+  function loadoutHTML(b) {
+    var g = b.gear, tal = b.talisman;
+    var h = '<div class="lo-row"><span class="lo-part">' + t("weapon_label") + '</span><div class="lo-main">' +
+      '<div class="lo-name">' + g.weapon.name + '</div><div class="lo-meta">' + g.weapon.meta + "</div>" +
+      decoChips(g.weapon.decos) + "</div></div>";
+    if (g.mods) {
+      h += '<div class="lo-row"><span class="lo-part">' + t("mods_label") + '</span><div class="lo-main"><div class="lo-meta">' + g.mods + "</div></div></div>";
+    }
+    g.armor.forEach(function (piece) {
+      h += '<div class="lo-row"><span class="lo-part">' + t("part_" + piece.part) + '</span><div class="lo-main">' +
+        '<div class="lo-name">' + piece.name + '</div><div class="lo-meta">' + skillLine(piece.skills) + "</div></div></div>";
+    });
+    h += '<div class="lo-row"><span class="lo-part">' + t("armor_decos_label") + '</span><div class="lo-main">' +
+      decoChips(g.armorDecos) + '<div class="lo-note">' + t("armor_decos_note") + "</div></div></div>";
+    // talisman row
+    h += '<div class="lo-row lo-talisman"><span class="lo-part">' + t("talisman_label") + '</span><div class="lo-main">';
+    if (tal.kind === "crafted") {
+      h += '<div class="lo-name">' + tal.label + '</div><span class="crafted-badge">' + t("crafted_badge") + "</span>";
+    } else {
+      var talSkills = tal.skills.map(function (p) { return sNameEn(p[0]) + " Lv" + p[1]; }).join(" · ");
+      var labelText = "";
+      if (tal.label) {
+        var rar = null;
+        Object.keys(data.rarities).forEach(function (k) { if (data.rarities[k].name === tal.label) rar = data.rarities[k]; });
+        labelText = (rar ? I.charmName(rar) : tal.label) + " — ";
+      }
+      h += '<div class="lo-name">' + labelText + talSkills + "</div>";
+      if (tal.decos && tal.decos.length) h += '<div class="lo-meta">' + t("socketed_label") + ": " + tal.decos.join(" · ") + "</div>";
+    }
+    h += "</div></div>";
+    // final skills
+    var f = b.finalSkills;
+    h += '<div class="lo-finals"><div class="lo-finals-title">' + t("final_skills") + "</div>" +
+      '<div class="lo-fs"><span>' + t("fs_weapon") + ":</span> " + skillLine(f.weapon) + "</div>" +
+      '<div class="lo-fs"><span>' + t("fs_armor") + ":</span> " + skillLine(f.armor) + "</div>" +
+      '<div class="lo-fs"><span>' + t("fs_set") + ":</span> " + f.set.join(" · ") + "</div></div>";
+    return h;
+  }
+
+  function buildSummary(b) {
+    if (I.lang === "zh") return b.summaryZh || b.summary;
+    if (I.lang === "tw") return b.summaryTw || b.summary;
+    if (I.lang === "ja") return b.summaryJa || b.summary;
+    return b.summary;
+  }
+
   function renderBuilds() {
     var builds = window.TALISMAN_BUILDS || [];
     if (!builds.length) return;
@@ -322,42 +379,9 @@
     var weapons = [];
     builds.forEach(function (b) { if (weapons.indexOf(b.weapon) === -1) weapons.push(b.weapon); });
     var filters = $("#buildFilters");
-    var all = document.createElement("button");
-    all.className = "chip active"; all.textContent = "All weapons";
-    all.addEventListener("click", function () { filterBuilds(""); setActiveFilter(all); });
-    filters.appendChild(all);
-    weapons.forEach(function (w) {
-      var c = document.createElement("button");
-      c.className = "chip"; c.textContent = w;
-      c.addEventListener("click", function () { filterBuilds(w); setActiveFilter(c); });
-      filters.appendChild(c);
-    });
+    filters.innerHTML = "";
     var grid = $("#buildGrid");
-    builds.forEach(function (b, bi) {
-      var card = document.createElement("div");
-      card.className = "build-card";
-      card.setAttribute("data-weapon", b.weapon);
-      var tal = b.talisman.skills.map(function (s) { return s.name + " Lv" + s.level; }).join(" · ");
-      if (b.talisman.slots && b.talisman.slots.length) tal += "  ·  " + b.talisman.slots.map(function (s) { return s === -1 ? "[W]" : "[" + s + "]"; }).join("");
-      card.innerHTML =
-        '<span class="weapon-tag">' + b.weapon + "</span>" +
-        "<h3>" + b.name + "</h3>" +
-        "<p>" + b.summary + "</p>" +
-        '<div class="build-talisman"><span class="t-label">Ideal talisman</span>' + tal + "</div>" +
-        '<p class="build-source">Source: <a href="' + b.sourceUrl + '" target="_blank" rel="noopener">' + b.sourceName + "</a> · " + b.version + "</p>" +
-        '<button class="btn-odds">Check the odds →</button>';
-      card.querySelector(".btn-odds").addEventListener("click", function () {
-        state.rows = [{ skill: "", level: null }, { skill: "", level: null }, { skill: "", level: null }];
-        b.talisman.skills.forEach(function (s, i) {
-          var match = data.skills.find(function (x) { return x.name === s.name; });
-          if (match && i < 3) state.rows[i] = { skill: match.id, level: s.level };
-        });
-        state.slots = b.talisman.slots || [];
-        renderRows(); renderSlotChips(); renderResult();
-        document.querySelector("#calculator").scrollIntoView({ behavior: "smooth" });
-      });
-      grid.appendChild(card);
-    });
+    grid.innerHTML = "";
     function setActiveFilter(active) {
       filters.querySelectorAll(".chip").forEach(function (c) { c.classList.toggle("active", c === active); });
     }
@@ -366,11 +390,74 @@
         card.style.display = !w || card.getAttribute("data-weapon") === w ? "" : "none";
       });
     }
+    var all = document.createElement("button");
+    all.className = "chip active"; all.textContent = t("all_weapons");
+    all.addEventListener("click", function () { filterBuilds(""); setActiveFilter(all); });
+    filters.appendChild(all);
+    weapons.forEach(function (w) {
+      var c = document.createElement("button");
+      c.className = "chip"; c.textContent = I.weaponName(w);
+      c.addEventListener("click", function () { filterBuilds(w); setActiveFilter(c); });
+      filters.appendChild(c);
+    });
+    builds.forEach(function (b) {
+      var card = document.createElement("div");
+      card.className = "build-card";
+      card.setAttribute("data-weapon", b.weapon);
+      var tal = b.talisman;
+      var talHTML;
+      if (tal.kind === "crafted") {
+        talHTML = '<div class="build-talisman"><span class="t-label">' + t("ideal_talisman") + "</span>" + tal.label +
+          '<div class="crafted-note">' + t("crafted_note") + "</div></div>";
+      } else {
+        var line = tal.skills.map(function (p) { return sNameEn(p[0]) + " Lv" + p[1]; }).join(" · ");
+        if (tal.slots && tal.slots.length) line += "  ·  " + tal.slots.map(function (s) { return s === -1 ? "[W]" : "[" + s + "]"; }).join("");
+        talHTML = '<div class="build-talisman"><span class="t-label">' + t("ideal_talisman") + "</span>" + line + "</div>";
+      }
+      card.innerHTML =
+        '<span class="weapon-tag">' + I.weaponName(b.weapon) + "</span>" +
+        "<h3>" + b.name + "</h3>" +
+        "<p>" + buildSummary(b) + "</p>" +
+        talHTML +
+        '<div class="loadout" hidden>' + loadoutHTML(b) + "</div>" +
+        '<p class="build-source">' + t("source_label") + ' <a href="' + b.sourceUrl + '" target="_blank" rel="noopener">' + b.sourceName + "</a> · " + b.version + "</p>" +
+        '<div class="build-actions">' +
+        '<button class="btn-loadout">' + t("full_loadout") + "</button>" +
+        (tal.kind === "appraised" ? '<button class="btn-odds">' + t("check_odds") + "</button>" : "") +
+        "</div>";
+      var lo = card.querySelector(".loadout");
+      var loBtn = card.querySelector(".btn-loadout");
+      loBtn.addEventListener("click", function () {
+        lo.hidden = !lo.hidden;
+        loBtn.textContent = lo.hidden ? t("full_loadout") : t("hide_loadout");
+      });
+      var oddsBtn = card.querySelector(".btn-odds");
+      if (oddsBtn) {
+        oddsBtn.addEventListener("click", function () {
+          state.rows = [{ skill: "", level: null }, { skill: "", level: null }, { skill: "", level: null }];
+          tal.skills.forEach(function (p, i) {
+            var match = skillByName[p[0]];
+            if (match && i < 3) state.rows[i] = { skill: match.id, level: p[1] };
+          });
+          state.slots = tal.slots || [];
+          renderRows(); renderSlotChips(); renderResult();
+          document.querySelector("#calculator").scrollIntoView({ behavior: "smooth" });
+        });
+      }
+      grid.appendChild(card);
+    });
   }
 
-  renderRows();
-  renderSlotChips();
-  renderPaceChips();
-  renderResult();
-  renderBuilds();
+  /* ---------- language ---------- */
+  function renderAll() {
+    renderRows(); renderSlotChips(); renderPaceChips(); renderResult(); renderBuilds();
+  }
+  document.querySelectorAll(".lang-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      I.setLang(btn.getAttribute("data-lang"), renderAll);
+    });
+  });
+  document.documentElement.lang = I.lang === "zh" ? "zh-CN" : I.lang === "tw" ? "zh-TW" : I.lang;
+  I.applyStatic();
+  renderAll();
 })();
