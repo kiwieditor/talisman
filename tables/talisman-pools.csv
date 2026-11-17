@@ -1,0 +1,326 @@
+﻿# Wilds Talisman Calculator — Talisman Pool Tables (TU4 dataset, 2026-11-17)
+# Source: https://talisman.kiwieditor.com
+# Full tables & updates: Discord lab https://discord.gg/hcE7Bngm7J
+# Within a group every entry is equally likely. Chance in Group = entries of this skill at this level / group size.
+Group,Group Label,Used in Rarities,Skill ID,Skill (EN),Skill (ZH),Skill (TW),Skill (JA),Kind,Level,Group Size,Chance in Group %
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,artillery,Artillery,炮术,炮術,砲術,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,attack_boost,Attack Boost,攻击,攻擊,攻撃,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,ballistics,Ballistics,弹道强化,彈道強化,弾導強化,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,blast_attack,Blast Attack,爆破属性强化,爆破屬性強化,爆破属性強化,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,bludgeoner,Bludgeoner,钝器能手,鈍器能手,鈍器使い,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,charge_master,Charge Master,蓄力大师,蓄力大師,チャージマスター,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,critical_draw,Critical Draw,拔刀术【技】,拔刀術【技】,抜刀術,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,critical_element,Critical Element,会心击【属性】,會心擊【屬性】,会心撃,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,critical_eye,Critical Eye,看破,看破,見切り,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,critical_status,Critical Status,会心击【特殊】,會心擊【特殊】,会心撃,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,dragon_attack,Dragon Attack,龙属性攻击强化,龍屬性攻擊強化,龍属性攻撃強化,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,fire_attack,Fire Attack,火属性攻击强化,火屬性攻擊強化,火属性攻撃強化,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,focus,Focus,集中,集中,集中,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,guard,Guard,格挡性能,格擋效能,ガード性能,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,guard_up,Guard Up,格挡强化,格擋強化,ガード強化,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,handicraft,Handicraft,匠,匠,匠,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,horn_maestro,Horn Maestro,吹笛名人,吹笛名人,笛吹き名人,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,ice_attack,Ice Attack,冰属性攻击强化,冰屬性攻擊強化,氷属性攻撃強化,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,load_shells,Load Shells,炮弹装填,炮彈裝填,砲弾装填,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,mind_s_eye,Mind's Eye,心眼,心眼,心眼,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,offensive_guard,Offensive Guard,攻击守势,攻擊守勢,攻めの守勢,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,opening_shot,Opening Shot,首发迅击,首發迅擊,ファーストショット,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,paralysis_attack,Paralysis Attack,麻痹属性强化,麻痺屬性強化,麻痺属性強化,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,poison_attack,Poison Attack,毒属性强化,毒屬性強化,毒属性強化,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,power_prolonger,Power Prolonger,强化持续,強化持續,強化持続,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,protective_polish,Protective Polish,刚刃打磨,剛刃打磨,剛刃研磨,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,punishing_draw,Punishing Draw,拔刀术【力】,拔刀術【力】,抜刀術,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,rapid_morph,Rapid Morph,高速变形,高速變形,高速変形,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,razor_sharp,Razor Sharp,利刃,利刃,業物,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,sleep_attack,Sleep Attack,睡眠属性强化,睡眠屬性強化,睡眠属性強化,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,slugger,Slugger,击晕术,擊暈術,KO術,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,special_ammo_boost,Special Ammo Boost,特殊射击强化,特殊射擊強化,特殊射撃強化,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,speed_sharpening,Speed Sharpening,砥石使用高速化,砥石使用高速化,砥石使用高速化,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,stamina_thief,Stamina Thief,夺取耐力,奪取耐力,スタミナ奪取,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,tetrad_shot,Tetrad Shot,强四射击,強四射擊,フォースショット,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,thunder_attack,Thunder Attack,雷属性攻击强化,雷屬性攻擊強化,雷属性攻撃強化,weapon,1,37,2.7027
+G1,Weapon Skills · Tier 1,R5 R6 R7 R8,water_attack,Water Attack,水属性攻击强化,水屬性攻擊強化,水属性攻撃強化,weapon,1,37,2.7027
+G2,Weapon Skills · Tier 2,R6 R7 R8,airborne,Airborne,飞燕,飛燕,飛燕,weapon,1,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,artillery,Artillery,炮术,炮術,砲術,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,attack_boost,Attack Boost,攻击,攻擊,攻撃,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,ballistics,Ballistics,弹道强化,彈道強化,弾導強化,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,blast_attack,Blast Attack,爆破属性强化,爆破屬性強化,爆破属性強化,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,blast_functionality,Blast Functionality,爆破瓶追加,爆破瓶追加,爆破ビン追加,weapon,1,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,bludgeoner,Bludgeoner,钝器能手,鈍器能手,鈍器使い,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,charge_master,Charge Master,蓄力大师,蓄力大師,チャージマスター,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,charge_up,Charge Up,蓄击强化,蓄擊強化,溜打強化,weapon,1,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,critical_draw,Critical Draw,拔刀术【技】,拔刀術【技】,抜刀術,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,critical_element,Critical Element,会心击【属性】,會心擊【屬性】,会心撃,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,critical_eye,Critical Eye,看破,看破,見切り,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,critical_status,Critical Status,会心击【特殊】,會心擊【特殊】,会心撃,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,dragon_attack,Dragon Attack,龙属性攻击强化,龍屬性攻擊強化,龍属性攻撃強化,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,exhaust_functionality,Exhaust Functionality,减气瓶追加,減氣瓶追加,減気ビン追加,weapon,1,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,fire_attack,Fire Attack,火属性攻击强化,火屬性攻擊強化,火属性攻撃強化,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,focus,Focus,集中,集中,集中,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,guard,Guard,格挡性能,格擋效能,ガード性能,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,guard_up,Guard Up,格挡强化,格擋強化,ガード強化,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,handicraft,Handicraft,匠,匠,匠,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,horn_maestro,Horn Maestro,吹笛名人,吹笛名人,笛吹き名人,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,ice_attack,Ice Attack,冰属性攻击强化,冰屬性攻擊強化,氷属性攻撃強化,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,load_shells,Load Shells,炮弹装填,炮彈裝填,砲弾装填,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,mind_s_eye,Mind's Eye,心眼,心眼,心眼,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,offensive_guard,Offensive Guard,攻击守势,攻擊守勢,攻めの守勢,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,opening_shot,Opening Shot,首发迅击,首發迅擊,ファーストショット,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,paralysis_attack,Paralysis Attack,麻痹属性强化,麻痺屬性強化,麻痺属性強化,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,poison_attack,Poison Attack,毒属性强化,毒屬性強化,毒属性強化,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,poison_duration_up,Poison Duration Up,毒伤害强化,毒傷害強化,毒ダメージ強化,weapon,1,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,poison_functionality,Poison Functionality,毒瓶追加,毒瓶追加,毒ビン追加,weapon,1,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,power_prolonger,Power Prolonger,强化持续,強化持續,強化持続,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,protective_polish,Protective Polish,刚刃打磨,剛刃打磨,剛刃研磨,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,punishing_draw,Punishing Draw,拔刀术【力】,拔刀術【力】,抜刀術,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,rapid_morph,Rapid Morph,高速变形,高速變形,高速変形,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,razor_sharp,Razor Sharp,利刃,利刃,業物,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,sleep_attack,Sleep Attack,睡眠属性强化,睡眠屬性強化,睡眠属性強化,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,slugger,Slugger,击晕术,擊暈術,KO術,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,special_ammo_boost,Special Ammo Boost,特殊射击强化,特殊射擊強化,特殊射撃強化,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,speed_sharpening,Speed Sharpening,砥石使用高速化,砥石使用高速化,砥石使用高速化,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,stamina_thief,Stamina Thief,夺取耐力,奪取耐力,スタミナ奪取,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,tetrad_shot,Tetrad Shot,强四射击,強四射擊,フォースショット,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,thunder_attack,Thunder Attack,雷属性攻击强化,雷屬性攻擊強化,雷属性攻撃強化,weapon,2,43,2.3256
+G2,Weapon Skills · Tier 2,R6 R7 R8,water_attack,Water Attack,水属性攻击强化,水屬性攻擊強化,水属性攻撃強化,weapon,2,43,2.3256
+G3,Weapon Skills · Tier 3,R7 R8,artillery,Artillery,炮术,炮術,砲術,weapon,3,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,attack_boost,Attack Boost,攻击,攻擊,攻撃,weapon,3,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,ballistics,Ballistics,弹道强化,彈道強化,弾導強化,weapon,3,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,blast_attack,Blast Attack,爆破属性强化,爆破屬性強化,爆破属性強化,weapon,3,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,bludgeoner,Bludgeoner,钝器能手,鈍器能手,鈍器使い,weapon,3,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,charge_master,Charge Master,蓄力大师,蓄力大師,チャージマスター,weapon,3,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,critical_draw,Critical Draw,拔刀术【技】,拔刀術【技】,抜刀術,weapon,3,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,critical_element,Critical Element,会心击【属性】,會心擊【屬性】,会心撃,weapon,3,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,critical_eye,Critical Eye,看破,看破,見切り,weapon,3,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,critical_status,Critical Status,会心击【特殊】,會心擊【特殊】,会心撃,weapon,3,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,dragon_attack,Dragon Attack,龙属性攻击强化,龍屬性攻擊強化,龍属性攻撃強化,weapon,3,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,fire_attack,Fire Attack,火属性攻击强化,火屬性攻擊強化,火属性攻撃強化,weapon,3,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,focus,Focus,集中,集中,集中,weapon,3,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,guard,Guard,格挡性能,格擋效能,ガード性能,weapon,3,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,guard_up,Guard Up,格挡强化,格擋強化,ガード強化,weapon,3,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,handicraft,Handicraft,匠,匠,匠,weapon,3,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,ice_attack,Ice Attack,冰属性攻击强化,冰屬性攻擊強化,氷属性攻撃強化,weapon,3,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,master_s_touch,Master's Touch,达人艺,達人藝,達人芸,weapon,1,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,mind_s_eye,Mind's Eye,心眼,心眼,心眼,weapon,3,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,normal_shots,Normal Shots,通常弹·通常箭强化,通常彈·通常箭強化,通常弾・通常矢強化,weapon,1,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,offensive_guard,Offensive Guard,攻击守势,攻擊守勢,攻めの守勢,weapon,3,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,opening_shot,Opening Shot,首发迅击,首發迅擊,ファーストショット,weapon,3,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,para_functionality,Para Functionality,麻痹瓶追加,麻痺瓶追加,麻痺ビン追加,weapon,1,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,paralysis_attack,Paralysis Attack,麻痹属性强化,麻痺屬性強化,麻痺属性強化,weapon,3,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,piercing_shots,Piercing Shots,贯穿弹·龙之箭强化,貫穿彈·龍之箭強化,貫通弾・竜の矢強化,weapon,1,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,poison_attack,Poison Attack,毒属性强化,毒屬性強化,毒属性強化,weapon,3,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,power_prolonger,Power Prolonger,强化持续,強化持續,強化持続,weapon,3,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,protective_polish,Protective Polish,刚刃打磨,剛刃打磨,剛刃研磨,weapon,3,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,punishing_draw,Punishing Draw,拔刀术【力】,拔刀術【力】,抜刀術,weapon,3,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,rapid_fire_up,Rapid Fire Up,速射强化,速射強化,速射強化,weapon,1,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,rapid_morph,Rapid Morph,高速变形,高速變形,高速変形,weapon,3,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,razor_sharp,Razor Sharp,利刃,利刃,業物,weapon,3,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,sleep_attack,Sleep Attack,睡眠属性强化,睡眠屬性強化,睡眠属性強化,weapon,3,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,sleep_functionality,Sleep Functionality,睡眠瓶追加,睡眠瓶追加,睡眠ビン追加,weapon,1,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,slugger,Slugger,击晕术,擊暈術,KO術,weapon,3,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,spread_power_shots,Spread/Power Shots,散弹·刚射强化,散彈·剛射強化,散弾・剛射強化,weapon,1,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,stamina_thief,Stamina Thief,夺取耐力,奪取耐力,スタミナ奪取,weapon,3,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,tetrad_shot,Tetrad Shot,强四射击,強四射擊,フォースショット,weapon,3,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,thunder_attack,Thunder Attack,雷属性攻击强化,雷屬性攻擊強化,雷属性攻撃強化,weapon,3,40,2.5000
+G3,Weapon Skills · Tier 3,R7 R8,water_attack,Water Attack,水属性攻击强化,水屬性攻擊強化,水属性攻撃強化,weapon,3,40,2.5000
+G4,Weapon Skills · Tier 4,R7 R8,attack_boost,Attack Boost,攻击,攻擊,攻撃,weapon,2,21,4.7619
+G4,Weapon Skills · Tier 4,R7 R8,ballistics,Ballistics,弹道强化,彈道強化,弾導強化,weapon,2,21,4.7619
+G4,Weapon Skills · Tier 4,R7 R8,blast_attack,Blast Attack,爆破属性强化,爆破屬性強化,爆破属性強化,weapon,2,21,4.7619
+G4,Weapon Skills · Tier 4,R7 R8,critical_boost,Critical Boost,超会心,超會心,超会心,weapon,1,21,4.7619
+G4,Weapon Skills · Tier 4,R7 R8,critical_element,Critical Element,会心击【属性】,會心擊【屬性】,会心撃,weapon,2,21,4.7619
+G4,Weapon Skills · Tier 4,R7 R8,critical_eye,Critical Eye,看破,看破,見切り,weapon,2,21,4.7619
+G4,Weapon Skills · Tier 4,R7 R8,dragon_attack,Dragon Attack,龙属性攻击强化,龍屬性攻擊強化,龍属性攻撃強化,weapon,2,21,4.7619
+G4,Weapon Skills · Tier 4,R7 R8,fire_attack,Fire Attack,火属性攻击强化,火屬性攻擊強化,火属性攻撃強化,weapon,2,21,4.7619
+G4,Weapon Skills · Tier 4,R7 R8,guard,Guard,格挡性能,格擋效能,ガード性能,weapon,2,21,4.7619
+G4,Weapon Skills · Tier 4,R7 R8,guard_up,Guard Up,格挡强化,格擋強化,ガード強化,weapon,2,21,4.7619
+G4,Weapon Skills · Tier 4,R7 R8,handicraft,Handicraft,匠,匠,匠,weapon,2,21,4.7619
+G4,Weapon Skills · Tier 4,R7 R8,ice_attack,Ice Attack,冰属性攻击强化,冰屬性攻擊強化,氷属性攻撃強化,weapon,2,21,4.7619
+G4,Weapon Skills · Tier 4,R7 R8,opening_shot,Opening Shot,首发迅击,首發迅擊,ファーストショット,weapon,2,21,4.7619
+G4,Weapon Skills · Tier 4,R7 R8,paralysis_attack,Paralysis Attack,麻痹属性强化,麻痺屬性強化,麻痺属性強化,weapon,2,21,4.7619
+G4,Weapon Skills · Tier 4,R7 R8,poison_attack,Poison Attack,毒属性强化,毒屬性強化,毒属性強化,weapon,2,21,4.7619
+G4,Weapon Skills · Tier 4,R7 R8,protective_polish,Protective Polish,刚刃打磨,剛刃打磨,剛刃研磨,weapon,2,21,4.7619
+G4,Weapon Skills · Tier 4,R7 R8,razor_sharp,Razor Sharp,利刃,利刃,業物,weapon,2,21,4.7619
+G4,Weapon Skills · Tier 4,R7 R8,sleep_attack,Sleep Attack,睡眠属性强化,睡眠屬性強化,睡眠属性強化,weapon,2,21,4.7619
+G4,Weapon Skills · Tier 4,R7 R8,tetrad_shot,Tetrad Shot,强四射击,強四射擊,フォースショット,weapon,2,21,4.7619
+G4,Weapon Skills · Tier 4,R7 R8,thunder_attack,Thunder Attack,雷属性攻击强化,雷屬性攻擊強化,雷属性攻撃強化,weapon,2,21,4.7619
+G4,Weapon Skills · Tier 4,R7 R8,water_attack,Water Attack,水属性攻击强化,水屬性攻擊強化,水属性攻撃強化,weapon,2,21,4.7619
+G5,Armor Skills · 1-Slot (Low),R7 R8,adaptability,Adaptability,适应环境,適應環境,環境適応,armor,1,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,antivirus,Antivirus,无我之境,無我之境,無我の境地,armor,1,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,aquatic_oilsilt_mobility,Aquatic/Oilsilt Mobility,适应水域·油泥,適應水域·油泥,水場・油泥適応,armor,1,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,bind_resistance,Bind Resistance,束缚耐性,束縛耐性,拘束耐性,armor,1,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,blast_resistance,Blast Resistance,爆破异常耐性,爆破異常耐性,爆破やられ耐性,armor,1,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,bleeding_resistance,Bleeding Resistance,裂伤耐性,裂傷耐性,裂傷耐性,armor,1,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,bombardier,Bombardier,炸弹客,炸彈客,ボマー,armor,1,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,botanist,Botanist,植生学,植生學,植生学,armor,2,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,constitution,Constitution,体术,體術,体術,armor,2,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,defense_boost,Defense Boost,防御,防禦,防御,armor,2,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,divine_blessing,Divine Blessing,精灵加护,精靈加護,精霊の加護,armor,1,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,dragon_resistance,Dragon Resistance,龙耐性,龍耐性,龍耐性,armor,1,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,fire_resistance,Fire Resistance,火耐性,火耐性,火耐性,armor,1,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,flinch_free,Flinch Free,减轻胆怯,減輕膽怯,ひるみ軽減,armor,1,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,free_meal,Free Meal,满足感,滿足感,満足感,armor,1,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,geologist,Geologist,地质学,地質學,地質学,armor,1,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,hunger_resistance,Hunger Resistance,饥饿耐性,飢餓耐性,腹減り耐性,armor,1,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,ice_resistance,Ice Resistance,冰耐性,冰耐性,氷耐性,armor,1,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,intimidator,Intimidator,威吓,威嚇,威嚇,armor,1,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,iron_skin,Iron Skin,防御力下降耐性,防禦力下降耐性,防御力DOWN耐性,armor,1,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,item_prolonger,Item Prolonger,道具使用强化,道具使用強化,アイテム使用強化,armor,1,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,marathon_runner,Marathon Runner,跑者,跑者,ランナー,armor,1,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,paralysis_resistance,Paralysis Resistance,麻痹耐性,麻痺耐性,麻痺耐性,armor,1,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,poison_resistance,Poison Resistance,毒耐性,毒耐性,毒耐性,armor,1,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,quick_sheathe,Quick Sheathe,纳刀术,納刀術,納刀術,armor,1,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,recovery_speed,Recovery Speed,回复速度,回覆速度,回復速度,armor,1,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,recovery_up,Recovery Up,体力回复量提升,體力回覆量提升,体力回復量UP,armor,1,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,sleep_resistance,Sleep Resistance,睡眠耐性,睡眠耐性,睡眠耐性,armor,1,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,speed_eating,Speed Eating,快吃,快吃,早食い,armor,1,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,stench_resistance,Stench Resistance,恶臭耐性,惡臭耐性,悪臭耐性,armor,1,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,stun_resistance,Stun Resistance,昏厥耐性,昏厥耐性,気絶耐性,armor,1,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,survival_expert,Survival Expert,环境利用知识,環境利用知識,環境利用の知識,armor,1,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,thunder_resistance,Thunder Resistance,雷耐性,雷耐性,雷耐性,armor,1,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,tremor_resistance,Tremor Resistance,耐震,耐震,耐震,armor,1,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,water_resistance,Water Resistance,水耐性,水耐性,水耐性,armor,1,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,wide_range,Wide-Range,广域化,廣域化,広域化,armor,2,37,2.7027
+G5,Armor Skills · 1-Slot (Low),R7 R8,windproof,Windproof,风压耐性,風壓耐性,風圧耐性,armor,1,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,adaptability,Adaptability,适应环境,適應環境,環境適応,armor,2,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,antivirus,Antivirus,无我之境,無我之境,無我の境地,armor,2,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,aquatic_oilsilt_mobility,Aquatic/Oilsilt Mobility,适应水域·油泥,適應水域·油泥,水場・油泥適応,armor,2,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,bind_resistance,Bind Resistance,束缚耐性,束縛耐性,拘束耐性,armor,2,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,blast_resistance,Blast Resistance,爆破异常耐性,爆破異常耐性,爆破やられ耐性,armor,2,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,bleeding_resistance,Bleeding Resistance,裂伤耐性,裂傷耐性,裂傷耐性,armor,2,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,bombardier,Bombardier,炸弹客,炸彈客,ボマー,armor,2,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,botanist,Botanist,植生学,植生學,植生学,armor,3,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,constitution,Constitution,体术,體術,体術,armor,3,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,defense_boost,Defense Boost,防御,防禦,防御,armor,3,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,divine_blessing,Divine Blessing,精灵加护,精靈加護,精霊の加護,armor,2,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,dragon_resistance,Dragon Resistance,龙耐性,龍耐性,龍耐性,armor,2,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,fire_resistance,Fire Resistance,火耐性,火耐性,火耐性,armor,2,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,flinch_free,Flinch Free,减轻胆怯,減輕膽怯,ひるみ軽減,armor,2,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,free_meal,Free Meal,满足感,滿足感,満足感,armor,2,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,geologist,Geologist,地质学,地質學,地質学,armor,2,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,hunger_resistance,Hunger Resistance,饥饿耐性,飢餓耐性,腹減り耐性,armor,2,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,ice_resistance,Ice Resistance,冰耐性,冰耐性,氷耐性,armor,2,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,intimidator,Intimidator,威吓,威嚇,威嚇,armor,2,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,iron_skin,Iron Skin,防御力下降耐性,防禦力下降耐性,防御力DOWN耐性,armor,2,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,item_prolonger,Item Prolonger,道具使用强化,道具使用強化,アイテム使用強化,armor,2,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,marathon_runner,Marathon Runner,跑者,跑者,ランナー,armor,2,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,paralysis_resistance,Paralysis Resistance,麻痹耐性,麻痺耐性,麻痺耐性,armor,2,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,poison_resistance,Poison Resistance,毒耐性,毒耐性,毒耐性,armor,2,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,quick_sheathe,Quick Sheathe,纳刀术,納刀術,納刀術,armor,2,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,recovery_speed,Recovery Speed,回复速度,回覆速度,回復速度,armor,2,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,recovery_up,Recovery Up,体力回复量提升,體力回覆量提升,体力回復量UP,armor,2,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,sleep_resistance,Sleep Resistance,睡眠耐性,睡眠耐性,睡眠耐性,armor,2,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,speed_eating,Speed Eating,快吃,快吃,早食い,armor,2,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,stench_resistance,Stench Resistance,恶臭耐性,惡臭耐性,悪臭耐性,armor,2,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,stun_resistance,Stun Resistance,昏厥耐性,昏厥耐性,気絶耐性,armor,2,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,survival_expert,Survival Expert,环境利用知识,環境利用知識,環境利用の知識,armor,2,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,thunder_resistance,Thunder Resistance,雷耐性,雷耐性,雷耐性,armor,2,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,tremor_resistance,Tremor Resistance,耐震,耐震,耐震,armor,2,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,water_resistance,Water Resistance,水耐性,水耐性,水耐性,armor,2,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,wide_range,Wide-Range,广域化,廣域化,広域化,armor,3,37,2.7027
+G6,Armor Skills · 1-Slot (Mid),R5 R6 R7 R8,windproof,Windproof,风压耐性,風壓耐性,風圧耐性,armor,2,37,2.7027
+G7,Armor Skills · 1-Slot (High),R5 R6 R7 R8,antivirus,Antivirus,无我之境,無我之境,無我の境地,armor,3,34,2.9412
+G7,Armor Skills · 1-Slot (High),R5 R6 R7 R8,bind_resistance,Bind Resistance,束缚耐性,束縛耐性,拘束耐性,armor,3,34,2.9412
+G7,Armor Skills · 1-Slot (High),R5 R6 R7 R8,blast_resistance,Blast Resistance,爆破异常耐性,爆破異常耐性,爆破やられ耐性,armor,3,34,2.9412
+G7,Armor Skills · 1-Slot (High),R5 R6 R7 R8,bleeding_resistance,Bleeding Resistance,裂伤耐性,裂傷耐性,裂傷耐性,armor,3,34,2.9412
+G7,Armor Skills · 1-Slot (High),R5 R6 R7 R8,bombardier,Bombardier,炸弹客,炸彈客,ボマー,armor,3,34,2.9412
+G7,Armor Skills · 1-Slot (High),R5 R6 R7 R8,botanist,Botanist,植生学,植生學,植生学,armor,4,34,2.9412
+G7,Armor Skills · 1-Slot (High),R5 R6 R7 R8,constitution,Constitution,体术,體術,体術,armor,4,34,2.9412
+G7,Armor Skills · 1-Slot (High),R5 R6 R7 R8,defense_boost,Defense Boost,防御,防禦,防御,armor,4,34,2.9412
+G7,Armor Skills · 1-Slot (High),R5 R6 R7 R8,divine_blessing,Divine Blessing,精灵加护,精靈加護,精霊の加護,armor,3,34,2.9412
+G7,Armor Skills · 1-Slot (High),R5 R6 R7 R8,dragon_resistance,Dragon Resistance,龙耐性,龍耐性,龍耐性,armor,3,34,2.9412
+G7,Armor Skills · 1-Slot (High),R5 R6 R7 R8,fire_resistance,Fire Resistance,火耐性,火耐性,火耐性,armor,3,34,2.9412
+G7,Armor Skills · 1-Slot (High),R5 R6 R7 R8,flinch_free,Flinch Free,减轻胆怯,減輕膽怯,ひるみ軽減,armor,3,34,2.9412
+G7,Armor Skills · 1-Slot (High),R5 R6 R7 R8,free_meal,Free Meal,满足感,滿足感,満足感,armor,3,34,2.9412
+G7,Armor Skills · 1-Slot (High),R5 R6 R7 R8,geologist,Geologist,地质学,地質學,地質学,armor,3,34,2.9412
+G7,Armor Skills · 1-Slot (High),R5 R6 R7 R8,hunger_resistance,Hunger Resistance,饥饿耐性,飢餓耐性,腹減り耐性,armor,3,34,2.9412
+G7,Armor Skills · 1-Slot (High),R5 R6 R7 R8,ice_resistance,Ice Resistance,冰耐性,冰耐性,氷耐性,armor,3,34,2.9412
+G7,Armor Skills · 1-Slot (High),R5 R6 R7 R8,intimidator,Intimidator,威吓,威嚇,威嚇,armor,3,34,2.9412
+G7,Armor Skills · 1-Slot (High),R5 R6 R7 R8,iron_skin,Iron Skin,防御力下降耐性,防禦力下降耐性,防御力DOWN耐性,armor,3,34,2.9412
+G7,Armor Skills · 1-Slot (High),R5 R6 R7 R8,item_prolonger,Item Prolonger,道具使用强化,道具使用強化,アイテム使用強化,armor,3,34,2.9412
+G7,Armor Skills · 1-Slot (High),R5 R6 R7 R8,marathon_runner,Marathon Runner,跑者,跑者,ランナー,armor,3,34,2.9412
+G7,Armor Skills · 1-Slot (High),R5 R6 R7 R8,paralysis_resistance,Paralysis Resistance,麻痹耐性,麻痺耐性,麻痺耐性,armor,3,34,2.9412
+G7,Armor Skills · 1-Slot (High),R5 R6 R7 R8,poison_resistance,Poison Resistance,毒耐性,毒耐性,毒耐性,armor,3,34,2.9412
+G7,Armor Skills · 1-Slot (High),R5 R6 R7 R8,quick_sheathe,Quick Sheathe,纳刀术,納刀術,納刀術,armor,3,34,2.9412
+G7,Armor Skills · 1-Slot (High),R5 R6 R7 R8,recovery_speed,Recovery Speed,回复速度,回覆速度,回復速度,armor,3,34,2.9412
+G7,Armor Skills · 1-Slot (High),R5 R6 R7 R8,recovery_up,Recovery Up,体力回复量提升,體力回覆量提升,体力回復量UP,armor,3,34,2.9412
+G7,Armor Skills · 1-Slot (High),R5 R6 R7 R8,sleep_resistance,Sleep Resistance,睡眠耐性,睡眠耐性,睡眠耐性,armor,3,34,2.9412
+G7,Armor Skills · 1-Slot (High),R5 R6 R7 R8,speed_eating,Speed Eating,快吃,快吃,早食い,armor,3,34,2.9412
+G7,Armor Skills · 1-Slot (High),R5 R6 R7 R8,stun_resistance,Stun Resistance,昏厥耐性,昏厥耐性,気絶耐性,armor,3,34,2.9412
+G7,Armor Skills · 1-Slot (High),R5 R6 R7 R8,survival_expert,Survival Expert,环境利用知识,環境利用知識,環境利用の知識,armor,3,34,2.9412
+G7,Armor Skills · 1-Slot (High),R5 R6 R7 R8,thunder_resistance,Thunder Resistance,雷耐性,雷耐性,雷耐性,armor,3,34,2.9412
+G7,Armor Skills · 1-Slot (High),R5 R6 R7 R8,tremor_resistance,Tremor Resistance,耐震,耐震,耐震,armor,3,34,2.9412
+G7,Armor Skills · 1-Slot (High),R5 R6 R7 R8,water_resistance,Water Resistance,水耐性,水耐性,水耐性,armor,3,34,2.9412
+G7,Armor Skills · 1-Slot (High),R5 R6 R7 R8,wide_range,Wide-Range,广域化,廣域化,広域化,armor,4,34,2.9412
+G7,Armor Skills · 1-Slot (High),R5 R6 R7 R8,windproof,Windproof,风压耐性,風壓耐性,風圧耐性,armor,3,34,2.9412
+G8,Armor Skills · 2-Slot (Low),R5 R6 R7 R8,ambush,Ambush,急袭,急襲,急襲,armor,1,15,6.6667
+G8,Armor Skills · 2-Slot (Low),R5 R6 R7 R8,blight_resistance,Blight Resistance,属性异常耐性,屬性異常耐性,属性やられ耐性,armor,1,15,6.6667
+G8,Armor Skills · 2-Slot (Low),R5 R6 R7 R8,coalescence,Coalescence,因祸得福,因禍得福,災禍転福,armor,1,15,6.6667
+G8,Armor Skills · 2-Slot (Low),R5 R6 R7 R8,counterstrike,Counterstrike,逆袭,逆襲,逆襲,armor,1,15,6.6667
+G8,Armor Skills · 2-Slot (Low),R5 R6 R7 R8,earplugs,Earplugs,耳塞,耳塞,耳栓,armor,1,15,6.6667
+G8,Armor Skills · 2-Slot (Low),R5 R6 R7 R8,evade_extender,Evade Extender,回避距离提升,迴避距離提升,回避距離UP,armor,1,15,6.6667
+G8,Armor Skills · 2-Slot (Low),R5 R6 R7 R8,evade_window,Evade Window,回避性能,迴避效能,回避性能,armor,2,15,6.6667
+G8,Armor Skills · 2-Slot (Low),R5 R6 R7 R8,heroics,Heroics,火场怪力,火場怪力,火事場力,armor,2,15,6.6667
+G8,Armor Skills · 2-Slot (Low),R5 R6 R7 R8,maximum_might,Maximum Might,精神抖擞,精神抖擻,渾身,armor,1,15,6.6667
+G8,Armor Skills · 2-Slot (Low),R5 R6 R7 R8,mushroomancer,Mushroomancer,最爱蘑菇,最愛蘑菇,キノコ大好き,armor,1,15,6.6667
+G8,Armor Skills · 2-Slot (Low),R5 R6 R7 R8,partbreaker,Partbreaker,破坏王,破壞王,破壊王,armor,1,15,6.6667
+G8,Armor Skills · 2-Slot (Low),R5 R6 R7 R8,peak_performance,Peak Performance,无伤,無傷,フルチャージ,armor,1,15,6.6667
+G8,Armor Skills · 2-Slot (Low),R5 R6 R7 R8,resentment,Resentment,怨恨,怨恨,逆恨み,armor,1,15,6.6667
+G8,Armor Skills · 2-Slot (Low),R5 R6 R7 R8,stamina_surge,Stamina Surge,耐力急速回复,耐力急速回復,スタミナ急速回復,armor,1,15,6.6667
+G8,Armor Skills · 2-Slot (Low),R5 R6 R7 R8,tool_specialist,Tool Specialist,整备,整備,整備,armor,2,15,6.6667
+G9,Armor Skills · 2-Slot (High),R5 R6,ambush,Ambush,急袭,急襲,急襲,armor,2,15,6.6667
+G9,Armor Skills · 2-Slot (High),R5 R6,blight_resistance,Blight Resistance,属性异常耐性,屬性異常耐性,属性やられ耐性,armor,2,15,6.6667
+G9,Armor Skills · 2-Slot (High),R5 R6,coalescence,Coalescence,因祸得福,因禍得福,災禍転福,armor,2,15,6.6667
+G9,Armor Skills · 2-Slot (High),R5 R6,counterstrike,Counterstrike,逆袭,逆襲,逆襲,armor,2,15,6.6667
+G9,Armor Skills · 2-Slot (High),R5 R6,earplugs,Earplugs,耳塞,耳塞,耳栓,armor,2,15,6.6667
+G9,Armor Skills · 2-Slot (High),R5 R6,evade_extender,Evade Extender,回避距离提升,迴避距離提升,回避距離UP,armor,2,15,6.6667
+G9,Armor Skills · 2-Slot (High),R5 R6,evade_window,Evade Window,回避性能,迴避效能,回避性能,armor,3,15,6.6667
+G9,Armor Skills · 2-Slot (High),R5 R6,heroics,Heroics,火场怪力,火場怪力,火事場力,armor,3,15,6.6667
+G9,Armor Skills · 2-Slot (High),R5 R6,maximum_might,Maximum Might,精神抖擞,精神抖擻,渾身,armor,2,15,6.6667
+G9,Armor Skills · 2-Slot (High),R5 R6,mushroomancer,Mushroomancer,最爱蘑菇,最愛蘑菇,キノコ大好き,armor,2,15,6.6667
+G9,Armor Skills · 2-Slot (High),R5 R6,partbreaker,Partbreaker,破坏王,破壞王,破壊王,armor,2,15,6.6667
+G9,Armor Skills · 2-Slot (High),R5 R6,peak_performance,Peak Performance,无伤,無傷,フルチャージ,armor,2,15,6.6667
+G9,Armor Skills · 2-Slot (High),R5 R6,resentment,Resentment,怨恨,怨恨,逆恨み,armor,2,15,6.6667
+G9,Armor Skills · 2-Slot (High),R5 R6,stamina_surge,Stamina Surge,耐力急速回复,耐力急速回復,スタミナ急速回復,armor,2,15,6.6667
+G9,Armor Skills · 2-Slot (High),R5 R6,tool_specialist,Tool Specialist,整备,整備,整備,armor,3,15,6.6667
+G10,Armor Skills · 3-Slot,R5 R6 R7 R8,adrenaline_rush,Adrenaline Rush,巧击,巧擊,巧撃,armor,1,9,11.1111
+G10,Armor Skills · 3-Slot,R5 R6 R7 R8,agitator,Agitator,挑战者,挑戰者,挑戦者,armor,1,9,11.1111
+G10,Armor Skills · 3-Slot,R5 R6 R7 R8,burst,Burst,连击,連擊,連撃,armor,1,9,11.1111
+G10,Armor Skills · 3-Slot,R5 R6 R7 R8,convert_element,Convert Element,属性变换,屬性變換,属性変換,armor,1,9,11.1111
+G10,Armor Skills · 3-Slot,R5 R6 R7 R8,elemental_absorption,Elemental Absorption,属性吸收,屬性吸收,属性吸収,armor,1,9,11.1111
+G10,Armor Skills · 3-Slot,R5 R6 R7 R8,flayer,Flayer,锁刃刺击,鎖刃刺擊,鎖刃刺撃,armor,1,9,11.1111
+G10,Armor Skills · 3-Slot,R5 R6 R7 R8,foray,Foray,攻势,攻勢,攻勢,armor,1,9,11.1111
+G10,Armor Skills · 3-Slot,R5 R6 R7 R8,latent_power,Latent Power,力量解放,力量解放,力の解放,armor,1,9,11.1111
+G10,Armor Skills · 3-Slot,R5 R6 R7 R8,weakness_exploit,Weakness Exploit,弱点特效,弱點特效,弱点特効,armor,1,9,11.1111
+
+# --- Rarity & Templates ---
+# A talisman first rolls its rarity (Rarity Chance), then one of that rarity's templates uniformly, then one skill per group slot, then a slot pattern by Slot Weights.
+Rarity,Rarity Chance %,Charm Name,Melding Points,Template #,Templates in Rarity,Skill Groups,Slot Options,Slot Weights
+R5,59.00,Unknown Charm,1,1,6,G1 + G6 + G6,1-1 | 2 | 2-1 | 3,1 | 1 | 1 | 1
+R5,59.00,Unknown Charm,1,2,6,G1 + G7,1-1 | 2 | 2-1 | 3,1 | 1 | 1 | 1
+R5,59.00,Unknown Charm,1,3,6,G1 + G8 + G6,1-1 | 2 | 2-1 | 3,1 | 1 | 1 | 1
+R5,59.00,Unknown Charm,1,4,6,G1 + G8 + G8,1-1 | 2 | 2-1 | 3,1 | 1 | 1 | 1
+R5,59.00,Unknown Charm,1,5,6,G1 + G9,1-1 | 2 | 2-1 | 3,1 | 1 | 1 | 1
+R5,59.00,Unknown Charm,1,6,6,G1 + G10,1-1 | 2 | 2-1 | 3,1 | 1 | 1 | 1
+R6,27.00,Historical Charm,3,1,7,G1 + G1 + G7,1 | 1-1 | 2 | 2-1,1 | 1 | 1 | 1
+R6,27.00,Historical Charm,3,2,7,G1 + G1 + G10,1 | 1-1 | 2 | 2-1,1 | 1 | 1 | 1
+R6,27.00,Historical Charm,3,3,7,G2 + G6 + G6,1 | 1-1 | 2 | 2-1,1 | 1 | 1 | 1
+R6,27.00,Historical Charm,3,4,7,G2 + G8 + G6,1 | 1-1 | 2 | 2-1,1 | 1 | 1 | 1
+R6,27.00,Historical Charm,3,5,7,G2 + G8 + G8,1 | 1-1 | 2 | 2-1,1 | 1 | 1 | 1
+R6,27.00,Historical Charm,3,6,7,G2 + G9,1 | 1-1 | 2 | 2-1,1 | 1 | 1 | 1
+R6,27.00,Historical Charm,3,7,7,G2 + G10,1 | 1-1 | 2 | 2-1,1 | 1 | 1 | 1
+R7,11.00,Secret Charm,6,1,8,G2 + G1 + G7,1 | 1-1 | 2,1 | 1 | 1
+R7,11.00,Secret Charm,6,2,8,G2 + G1 + G8,1-1 | 2 | 3,1 | 1 | 1
+R7,11.00,Secret Charm,6,3,8,G2 + G1 + G10,1 | 1-1 | 2,1 | 1 | 1
+R7,11.00,Secret Charm,6,4,8,G3 + G6 + G5,1 | 1-1 | 2,1 | 1 | 1
+R7,11.00,Secret Charm,6,5,8,G3 + G7,1 | 1-1 | 2,1 | 1 | 1
+R7,11.00,Secret Charm,6,6,8,G3 + G8 + G5,1 | 1-1 | 2,1 | 1 | 1
+R7,11.00,Secret Charm,6,7,8,G3 + G10,1 | 1-1 | 2,1 | 1 | 1
+R7,11.00,Secret Charm,6,8,8,G4 + G1 + G1,1 | 1-1 | 2,1 | 1 | 1
+R8,3.00,Golden Age Charm,10,1,8,G2 + G1 + G7,-1 | -1-1 | -1-1-1,50 | 33 | 17
+R8,3.00,Golden Age Charm,10,2,8,G2 + G1 + G8,-1 | -1-1 | -1-1-1,50 | 33 | 17
+R8,3.00,Golden Age Charm,10,3,8,G2 + G1 + G10,-1 | -1-1 | -1-1-1,50 | 33 | 17
+R8,3.00,Golden Age Charm,10,4,8,G3 + G6 + G5,-1 | -1-1 | -1-1-1,50 | 33 | 17
+R8,3.00,Golden Age Charm,10,5,8,G3 + G7,-1 | -1-1 | -1-1-1,50 | 33 | 17
+R8,3.00,Golden Age Charm,10,6,8,G3 + G8 + G5,-1 | -1-1 | -1-1-1,50 | 33 | 17
+R8,3.00,Golden Age Charm,10,7,8,G3 + G10,-1 | -1-1 | -1-1-1,50 | 33 | 17
+R8,3.00,Golden Age Charm,10,8,8,G4 + G1 + G1,-1 | -1-1 | -1-1-1,50 | 33 | 17
