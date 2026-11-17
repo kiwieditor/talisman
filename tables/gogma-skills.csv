@@ -1,0 +1,64 @@
+﻿# Wilds Talisman Calculator — Gogma (Artian) Skill Tables (TU4 dataset, 2026-11-17)
+# Source: https://talisman.kiwieditor.com
+# Full tables & updates: Discord lab https://discord.gg/hcE7Bngm7J
+# Each reroll draws 1 of 21 Set skills and 1 of 14 Group skills uniformly — 294 combos. The sequence is fixed per save seed.
+List,Index,Name (EN),Name (ZH),Name (TW),Name (JA),Force
+Set Skill,1,Doshaguma's Might,辟兽之力,闢獸之力,闢獣の力,
+Set Skill,2,Rathalos's Flare,火龙之力,火龍之力,火竜の力,
+Set Skill,3,Xu Wu's Vigor,暗器蛸之力,暗器鱆之力,暗器蛸の力,
+Set Skill,4,Gravios's Protection,铠龙之守护,鎧龍之守護,鎧竜の守護,
+Set Skill,5,Blangonga's Spirit,雪狮子王之斗志,雪獅子王之鬥志,雪獅子の闘志,
+Set Skill,6,Ebony Odogaron's Power,凶爪龙之力,兇爪龍之力,兇爪竜の力,
+Set Skill,7,Fulgur Anjanath's Will,雷颚龙之斗志,雷顎龍之鬥志,雷顎竜の闘志,
+Set Skill,8,Uth Duna's Cover,波衣龙之守护,波衣龍之守護,波衣竜の守護,
+Set Skill,9,Rey Dau's Voltage,煌雷龙之力,煌雷龍之力,煌雷竜の力,
+Set Skill,10,Nu Udra's Mutiny,狱焰蛸之反叛,獄焰鱆之叛逆,獄焔蛸の反逆,
+Set Skill,11,Jin Dahaad's Revolt,冻峰龙之反叛,凍峰龍之叛逆,凍峰竜の反逆,
+Set Skill,12,Gore Magala's Tyranny,黑蚀龙之力,黑蝕龍之力,黒蝕竜の力,
+Set Skill,13,Arkveld's Hunger,锁刃龙之饥饿,鎖刃龍之飢餓,鎖刃竜の飢餓,
+Set Skill,14,Guardian Arkveld's Vitality,护锁刃龙之命脉,護鎖刃龍之命脈,護鎖刃竜の命脈,
+Set Skill,15,Mizutsune's Prowess,泡狐龙之力,泡狐龍之力,泡狐竜の力,
+Set Skill,16,Zoh Shia's Pulse,白炽龙之脉动,白熾龍的脈動,白熾龍の脈動,
+Set Skill,17,Leviathan's Fury,海龙的涡雷,海龍的渦雷,海竜の渦雷,
+Set Skill,18,Seregios's Tenacity,千刃龙的斗志,千刃龍之鬥志,千刃竜の闘志,
+Set Skill,19,Gogmapocalypse,巨戟龙的默示录,巨戟龍的啟示錄,巨戟龍の黙示録,
+Set Skill,20,Soul of the Dark Knight,暗黑骑士之证,暗黑騎士之證,暗黒騎士の証,
+Set Skill,21,Omega Resonance,欧米茄共鸣,歐米茄共鳴,オメガレゾナンス,
+Group Skill,1,Neopteron Alert,甲虫之直觉,甲蟲的直覺,甲虫の知らせ,
+Group Skill,2,Neopteron Camouflage,甲虫之拟态,甲蟲的擬態,甲虫の擬態,
+Group Skill,3,Flexible Leathercraft,皮革制品之柔韧,皮革製品的柔韌性,革細工の柔性,
+Group Skill,4,Buttery Leathercraft,皮革制品之顺滑,皮革製品的滑順質感,革細工の滑性,
+Group Skill,5,Scaling Prowess,铺鳞之技法,鋪排鱗片的技巧,鱗張りの技法,
+Group Skill,6,Scale Layering,叠鳞之工艺,堆疊鱗片的手藝,鱗重ねの工夫,
+Group Skill,7,Fortifying Pelt,毛皮之昂扬,毛皮的昂揚,毛皮の昂揚,
+Group Skill,8,Alluring Pelt,毛皮之诱惑,毛皮的誘惑,毛皮の誘惑,
+Group Skill,9,Lord's Favor,霸主之骄傲,霸主的自尊,ヌシの誇り,
+Group Skill,10,Lord's Fury,霸主之愤慨,霸主的盛怒,ヌシの憤激,
+Group Skill,11,Guardian's Pulse,护龙之脉动,護龍的脈動,護竜の脈動,
+Group Skill,12,Guardian's Protection,护龙之守护,護龍的守護,護竜の守り,
+Group Skill,13,Imparted Wisdom,前辈之指引,前輩的指引,先達の導き,
+Group Skill,14,Lord's Soul,霸主之魂,霸主之魂,ヌシの魂,
+Weapon,1,Great Sword,大剑,大劍,大剣,
+Weapon,2,Sword & Shield,单手剑,單手劍,片手剣,
+Weapon,3,Dual Blades,双剑,雙劍,双剣,
+Weapon,4,Long Sword,太刀,太刀,太刀,
+Weapon,5,Hammer,大锤,大錘,ハンマー,
+Weapon,6,Hunting Horn,狩猎笛,狩獵笛,狩猟笛,
+Weapon,7,Lance,长枪,長槍,ランス,
+Weapon,8,Gunlance,铳枪,銃槍,ガンランス,
+Weapon,9,Switch Axe,斩斧,斬擊斧,スラッシュアックス,
+Weapon,10,Charge Blade,盾斧,充能斧,チャージアックス,
+Weapon,11,Insect Glaive,操虫棍,操蟲棍,操虫棍,
+Weapon,12,Bow,弓,弓,弓,
+Weapon,13,Heavy Bowgun,重弩炮,重弩炮,ヘビィボウガン,
+Weapon,14,Light Bowgun,轻弩炮,輕弩炮,ライトボウガン,
+Attribute,1,None,无,無,無,0
+Attribute,2,Fire,火,火,火,1
+Attribute,3,Water,水,水,水,2
+Attribute,4,Thunder,雷,雷,雷,4
+Attribute,5,Ice,冰,冰,氷,3
+Attribute,6,Dragon,龙,龍,龍,5
+Attribute,7,Poison,毒,毒,毒,6
+Attribute,8,Paralysis,麻痹,麻痺,麻痺,7
+Attribute,9,Sleep,睡眠,睡眠,睡眠,8
+Attribute,10,Blast,爆破,爆破,爆破,9
